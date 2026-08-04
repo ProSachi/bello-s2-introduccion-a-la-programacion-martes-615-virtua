@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Landing Page Moderna</title>
+    <!-- BLOQUE DIDÁCTICO CSS: Solo para visualizar las cajas estructurales en clase -->
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 20px; background-color: #1e1e1e; color: #333; line-height: 1.6; }
+        .wireframe { max-width: 900px; margin: 0 auto; background: #fff; padding: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        /* Cajas base */
+        header, main, section, footer { padding: 20px; margin-bottom: 15px; border: 2px solid; border-radius: 6px; position: relative; }
+        
+        /* Identificadores visuales (Etiquetas) */
+        .tag { position: absolute; top: -12px; left: 15px; background: #333; color: #4af626; padding: 2px 8px; font-family: monospace; font-size: 12px; border-radius: 4px; border: 1px solid #4af626; }
+        
+        /* Colores por sección para entender la jerarquía */
+        header { border-color: #e91e63; background: #fce4ec; }
+        nav { border: 1px dashed #e91e63; padding: 10px; background: rgba(255,255,255,0.5); }
+        main { border-color: #2196f3; background: #e3f2fd; }
+        
+        /* Secciones internas del main */
+        #hero { border-color: #9c27b0; background: #f3e5f5; text-align: center; padding: 40px 20px; }
+        #servicios { border-color: #ff9800; background: #fff3e0; }
+        #carrusel-testimonios { border-color: #00bcd4; background: #e0f7fa; }
+        #faq { border-color: #4caf50; background: #e8f5e9; }
+        #contacto { border-color: #795548; background: #efebe9; }
+        
+        footer { border-color: #607d8b; background: #eceff1; text-align: center; }
+        
+        /* Elementos internos para destacar estructura */
+        article, form, details { background: rgba(255,255,255,0.8); border: 1px solid #ccc; padding: 15px; margin-top: 10px; border-radius: 4px; }
+        ul { background: rgba(255,255,255,0.8); border: 1px solid #ccc; padding: 15px 15px 15px 35px; border-radius: 4px; }
+        summary { cursor: pointer; font-weight: bold; }
+        .cta-button { display: inline-block; padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="wireframe">
+        
+        <!-- CABECERA PRINCIPAL -->
+        <header>
+            <div class="tag">&lt;header&gt;</div>
+            <h2>Logo de la Empresa</h2>
+            <nav>
+                <div class="tag">&lt;nav&gt;</div>
+                <a href="#hero">Inicio</a> | 
+                <a href="#servicios">Servicios</a> | 
+                <a href="#faq">FAQ</a> | 
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
+            <div class="tag">&lt;main&gt;</div>
+            
+            <!-- 1. HERO SECTION -->
+            <section id="hero">
+                <div class="tag">&lt;section id="hero"&gt;</div>
+                <h1>Aprende a Programar desde Cero</h1>
+                <p>Domina las tecnologías web más demandadas del mercado con metodología práctica basada en proyectos reales.</p>
+                <a href="#contacto" class="cta-button">Comenzar mi ruta de aprendizaje</a>
+            </section>
+
+            <!-- 2. SERVICIOS / CARACTERÍSTICAS -->
+            <section id="servicios">
+                <div class="tag">&lt;section id="servicios"&gt;</div>
+                <h2>¿Qué aprenderás?</h2>
+                <article>
+                    <div class="tag">&lt;article&gt;</div>
+                    <h3>Fundamentos de HTML5</h3>
+                    <p>Creación de estructuras semánticas y accesibles.</p>
+                </article>
+                <article>
+                    <div class="tag">&lt;article&gt;</div>
+                    <h3>Estilos con CSS3</h3>
+                    <p>Diseño responsivo y maquetación visual (Próximamente).</p>
+                </article>
+            </section>
+
+            <!-- 3. CARRUSEL / TESTIMONIOS (Lista estructurada) -->
+            <section id="carrusel-testimonios">
+                <div class="tag">&lt;section id="carrusel-testimonios"&gt;</div>
+                <h2>Casos de Éxito</h2>
+                <ul>
+                    <div class="tag" style="top: -15px; left: -20px;">&lt;ul&gt; (Lista de elementos)</div>
+                    <li>
+                        <blockquote>"El enfoque práctico fue clave para mi aprendizaje."</blockquote>
+                        <cite>- Estudiante Generación 2025</cite>
+                    </li>
+                    <li>
+                        <blockquote>"Comprender la semántica antes de programar me ahorró muchos errores."</blockquote>
+                        <cite>- Desarrollador Junior</cite>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 4. PREGUNTAS FRECUENTES (Interactividad nativa) -->
+            <section id="faq">
+                <div class="tag">&lt;section id="faq"&gt;</div>
+                <h2>Preguntas Frecuentes</h2>
+                <details>
+                    <div class="tag" style="position:relative; top:0; left:0; display:inline-block; margin-bottom:5px;">&lt;details&gt; y &lt;summary&gt;</div>
+                    <summary>¿Qué es una etiqueta semántica?</summary>
+                    <p>Es una etiqueta que aporta significado al contenido, explicando qué es (un artículo, una navegación) en lugar de solo cómo debe verse.</p>
+                </details>
+                <details>
+                    <summary>¿Necesito instalar software de pago?</summary>
+                    <p>No, utilizaremos editores de código gratuitos y de código abierto como Visual Studio Code.</p>
+                </details>
+            </section>
+
+            <!-- 5. FORMULARIO DE CAPTACIÓN -->
+            <section id="contacto">
+                <div class="tag">&lt;section id="contacto"&gt;</div>
+                <h2>Solicitar Información</h2>
+                <form action="#" method="POST">
+                    <div class="tag" style="position:relative; top:0; left:0; display:inline-block; margin-bottom:10px;">&lt;form&gt;</div>
+                    <br>
+                    <label for="nombre">Nombre completo:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+                    
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </section>
+
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <div class="tag">&lt;footer&gt;</div>
+            <p>Estructura de clase para introducción a la programación web.</p>
+            <small>&copy; 2026. Todos los derechos reservados.</small>
+        </footer>
+
+    </div>
+</body>
+</html>
