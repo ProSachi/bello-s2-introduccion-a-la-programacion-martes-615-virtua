@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="./veterinaria.html">Regresa a ver nuestros servicios</a>
+      <br />
+      <a href="https://www.youtube.com/watch?v=MJkdaVFHrto&t=9s" target="_blank"
+        >Video recomendado de html</a
+      >
+
+      <h1>Veterinaria las sieta vidas</h1>
+    </header>
+
+    <main>
+      <form action="./agradecimiento.html" method="post">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" required />
+        <br /><br />
+        <label for="lastname">Apellido</label>
+        <input type="text" id="lastname" required />
+
+        <br /><br />
+        <label for="age">Edad</label>
+        <input type="number" id="age" max="99" step="0.2"/>
+
+        <br /><br />
+        <label for="direccion">Dirección</label>
+        <input
+          type="text"
+          id="direccion"
+          placeholder="Calle 10 # 45 - 30"
+          readonly
+          required
+        />
+
+        <br /><br />
+        <label for="email">Correo</label>
+        <input type="email" id="email" />
+
+        <br /><br />
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" />
+
+        <p>Selecciona tu membresía:</p>
+        <input type="radio" id="plan_gratis" name="plan" value="gratis" />
+        <label for="plan_gratis">Plan Gratuito</label>
+
+        <input type="radio" id="plan_pro" name="plan" value="pro" />
+        <label for="plan_pro">Plan Pro</label>
+
+        <input type="radio" id="plan_basi" name="plan" value="pro" />
+        <label for="plan_pro">Plan basico</label>
+
+        <p>Intereses (Marca los que apliquen):</p>
+
+        <input
+          type="checkbox"
+          id="interes_html"
+          name="intereses"
+          value="html"
+        />
+        <label for="interes_html">Aprender HTML</label>
+
+        <input type="checkbox" id="interes_css" name="intereses" value="css" />
+        <label for="interes_css">Aprender CSS</label>
+
+        <input type="checkbox" id="interes_js" name="intereses" value="js" />
+        <label for="interes_js">Aprender JS</label>
+
+        <label for="comentario"
+          >Indica si tienes restricciones alimentarias</label
+        >
+        <br />
+        <textarea name="" id="comentario" rows="5" cols="40"></textarea>
+        <br />
+        <label for="">Selecciona el tipo de sangre</label>
+        <br />
+        <select id="sangre" name="tipo_sangre" required>
+          <option value="" disabled selected>Seleccione una opción</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="O+">O+</option>
+          <option value="AB+">AB+</option>
+        </select>
+<br><br><br><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+      </form>
+    </main>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <footer>
+      <p>
+        Nuestras ubicación nuestros servicios politcas de seguridad trabaja con
+        nosotros
+      </p>
+    </footer>
+  </body>
+</html>

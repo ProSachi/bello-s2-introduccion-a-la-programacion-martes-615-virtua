@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+<p>Correctamente registrado</p>
+<a href="./veterinaria.html">Volver a la Página Princial
+</a>
+
+<section>
+    <h2>Suscríbete a las noticias del Hackathon</h2>
+    <!-- Se usa GET de forma didáctica para que los estudiantes vean cómo viaja el dato en la URL -->
+    <form action="/suscribir" method="GET">
+        
+        <label for="nombre_suscripcion">Tu nombre:</label>
+        <!-- type="text" con required para asegurar el dato -->
+        <input type="text" id="nombre_suscripcion" name="nombre" required>
+        <br><br>
+
+        <label for="correo_suscripcion">Tu mejor correo:</label>
+        <input type="email" id="correo_suscripcion" name="correo" required>
+        <br><br>
+
+        <!-- Un checkbox requiere un value, que es lo que se enviará si está marcado -->
+        <input type="checkbox" id="acepta_terminos" name="terminos" value="aceptados" required>
+        <label for="acepta_terminos">Acepto recibir correos promocionales</label>
+        <br><br>
+
+        <button type="submit">Suscribirme</button>
+    </form>
+</section>
+
+
+  </body>
+</html>

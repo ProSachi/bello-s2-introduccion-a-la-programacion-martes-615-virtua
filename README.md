@@ -17,6 +17,10 @@
 ### 🔗 Clase semana 4
 👉 **[Ver Grabación y Resumen en Microsoft Teams](https://cesdenet-my.sharepoint.com/:v:/g/personal/educaciondigital2_cesde_edu_co/IQCi6wOSG0iaSKXEAzbJClJlAUDMoJ784u-7FuwvSuO3E1w?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=BkzXeP)**
 
+### 🔗 Clase semana 5
+👉 **[Ver Grabación y Resumen en Microsoft Teams](https://cesdenet-my.sharepoint.com/:v:/g/personal/educaciondigital2_cesde_edu_co/IQARdpyGvl8uTIs6utL10ML_AWH8kQBuKxTO0Mjq38SNBQo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=gch7zA)**
+
+
 ---
 
 ###  Recomendaciones para el estudio de la sesión
