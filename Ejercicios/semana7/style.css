@@ -1,0 +1,27 @@
+/* Selector class */
+.section-container {
+  background-color: blue;
+  height: 300px;
+}
+/* Selector de ID */
+#section1 {
+  background-color: brown;
+  height: 300px;
+}
+/* Selector Etiqueta */
+section {
+  background-color: blueviolet;
+  height: 300px;
+}
+
+section p {
+  background-color: chartreuse;
+  border-color: black;
+  border-style: solid;
+  padding: 10px;
+  height: 100px;
+
+}
+div p {
+  background-color: darkgreen;
+}

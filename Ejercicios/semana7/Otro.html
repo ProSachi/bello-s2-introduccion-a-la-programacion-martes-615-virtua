@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Paws &amp; Flippers - Whiskers vs. Waddles</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#920500",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dcd9d9",
+                    "outline": "#777587",
+                    "surface-container-high": "#eae7e7",
+                    "on-tertiary-fixed-variant": "#005229",
+                    "surface-tint": "#4a41eb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c7c4d8",
+                    "on-primary-fixed-variant": "#301cd4",
+                    "on-secondary-container": "#fffbff",
+                    "tertiary-fixed-dim": "#36e281",
+                    "primary-container": "#3220d6",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e5e2e1",
+                    "background": "#fcf9f8",
+                    "tertiary-fixed": "#5eff9c",
+                    "surface-variant": "#e5e2e1",
+                    "secondary": "#b6180a",
+                    "tertiary": "#003a1b",
+                    "secondary-fixed-dim": "#ffb4a7",
+                    "on-tertiary-fixed": "#00210d",
+                    "tertiary-container": "#00542a",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#c2c1ff",
+                    "inverse-surface": "#313030",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-fixed": "#e2dfff",
+                    "secondary-fixed": "#ffdad4",
+                    "on-primary-fixed": "#0e006a",
+                    "on-primary-container": "#b2b0ff",
+                    "secondary-container": "#da3522",
+                    "on-surface-variant": "#464556",
+                    "on-background": "#1c1b1b",
+                    "primary": "#1d00ab",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface": "#fcf9f8",
+                    "on-secondary-fixed": "#400100",
+                    "surface-container": "#f0eded",
+                    "primary-fixed-dim": "#c2c1ff",
+                    "on-tertiary-container": "#15d273"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "xs": "4px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "sm": "12px",
+                    "lg": "48px",
+                    "md": "24px",
+                    "xl": "80px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Bricolage Grotesque"
+                    ],
+                    "label-sm": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-xl": [
+                            "Bricolage Grotesque"
+                    ],
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg-mobile": [
+                            "Bricolage Grotesque"
+                    ],
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg": [
+                            "Bricolage Grotesque"
+                    ],
+                    "label-bold": [
+                            "Plus Jakarta Sans"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "28px",
+                            {
+                                    "lineHeight": "34px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-xl": [
+                            "64px",
+                            {
+                                    "lineHeight": "72px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "38px",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "label-bold": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .pawsome-divider {
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 24' preserveAspectRatio='none'%3E%3Cpath d='M0,12 Q25,0 50,12 T100,12' fill='none' stroke='%233220d6' stroke-width='2' stroke-linecap='round' stroke-dasharray='1 10'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            opacity: 0.2;
+            margin: 48px 0;
+        }
+        
+        .ambient-shadow-primary {
+            box-shadow: 0 10px 25px -5px rgba(50, 32, 214, 0.1), 0 8px 10px -6px rgba(50, 32, 214, 0.1);
+        }
+        
+        .ambient-shadow-secondary {
+            box-shadow: 0 10px 25px -5px rgba(182, 24, 10, 0.1), 0 8px 10px -6px rgba(182, 24, 10, 0.1);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-surface-dim full-width top-0 sticky z-50 shadow-md shadow-primary/10 dark:shadow-none">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-black text-primary dark:text-primary-fixed-dim">
+                Paws &amp; Flippers
+            </div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:scale-105 hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-95 transition-all" href="#">Animals</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:scale-105 hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-95 transition-all" href="#">Gallery</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:scale-105 hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-95 transition-all" href="#">About</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:scale-105 hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-95 transition-all" href="#">Adopt</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 rounded-full hover:scale-105 transition-transform duration-200 active:scale-95 shadow-md shadow-primary/20 border-2 border-primary-container">
+                Join the Fun
+            </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-lg overflow-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex flex-col md:flex-row items-center justify-center gap-lg bg-surface-container-low rounded-[40px] p-8 md:p-16 mb-lg ambient-shadow-primary overflow-hidden border border-white/50">
+<!-- Decorative background elements -->
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary-fixed rounded-full blur-3xl opacity-60"></div>
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-secondary-fixed rounded-full blur-3xl opacity-60"></div>
+<div class="z-10 flex-1 max-w-xl text-center md:text-left">
+<div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-bold text-label-bold mb-6 border-2 border-tertiary-container shadow-sm">
+<span class="material-symbols-outlined text-lg">pets</span>
+                    The Ultimate Showdown
+                </div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-on-surface mb-6">
+                    Whiskers vs. <span class="text-secondary">Waddles</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md mx-auto md:mx-0">
+                    Dive into the playful world of agile felines and clumsy but lovable aquatic birds. Who will win your heart?
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="bg-secondary text-on-secondary font-label-bold text-label-bold px-8 py-4 rounded-full hover:scale-105 transition-transform duration-200 active:scale-95 shadow-lg shadow-secondary/30 border-2 border-[#920500] flex items-center justify-center gap-2">
+                        Join the Fun
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="z-10 flex-1 w-full max-w-lg relative">
+<div class="relative w-full aspect-square rounded-[32px] overflow-hidden border-8 border-white ambient-shadow-primary transform md:rotate-3 transition-transform hover:rotate-0 duration-300">
+<img class="w-full h-full object-cover" data-alt="A highly stylized, modern playful 3D illustration of a cute, fluffy orange cat playfully swiping a paw at a round, comical penguin standing on a small block of ice. The background is a vibrant, abstract split of warm sunny yellow and cool icy blue. The lighting is bright, soft, and inviting, emphasizing a 'Modern Playful' aesthetic with tactile, squishy textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVOQiUY4w1k7uoC9EgNVjYXiAySb_dkRZa57Zl-NvfHmilkXZhYPKN6HBhUSsTfhet-TYCHcEKJCiEMk6RYqMVYX8zJE3PyzpvErLkvjgWx-wcbk9sVpoK4zRd-oVQ-HMH5J-GJcNw-ac5bZUwbish3-BAyGPvt8q61bBzIna_onxV1HbkcyvCCuen7uHvX9uoESMHQwcZaT8cKaiPs7W3cb3zO7IT1gNfHNQ1WY2PB0z9Ezy0d4dXXg"/>
+</div>
+<!-- Floating Badge -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-4 rounded-2xl shadow-lg border border-surface-variant flex items-center gap-3 transform -rotate-6">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">10k+ Fans</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Voting now!</p>
+</div>
+</div>
+</div>
+</section>
+<div class="pawsome-divider"></div>
+<!-- Meet the Stars Section -->
+<section class="py-lg">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-4">Meet the Stars</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Get to know the unique quirks of our furry and feathery friends.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+<!-- Team Cat Card -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden ambient-shadow-primary border border-surface-variant transform transition-transform duration-300 hover:-translate-y-2 group">
+<div class="h-48 bg-primary/10 relative overflow-hidden">
+<img class="w-full h-full object-cover absolute inset-0 mix-blend-multiply opacity-80 group-hover:scale-110 transition-transform duration-500" data-alt="A close-up, high-quality photo of a majestic yet playful cat peeking over a vibrant blue textured surface. The cat has bright, curious eyes. The lighting is bright, natural light-mode style, highlighting the soft fur against the vivid background color. Modern, clean composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjM6p1rKI8leM6YeIhuFj0lx7i-RKkMVR6zVV9GllkAvycISX3B-PpO1nt9OlH51g7uh7CGb8E--vYsfsk_teZFDez_XFcWnacCtePOhf16E47b5_RsAnSoWPCLWUhOfavigP4X1BFB2F2QvIQjfto5gKIjf_Nt3pRSv2zySG9WdfKM0alultERLRghfecYPXy72OGvjd1hZbwNhBflf5cDgcj_w-q4iU7EqmPZ8Vf0danQWcnSuwlvg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">cruelty_free</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Team Cat</h3>
+</div>
+</div>
+<div class="p-6">
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-full text-sm">check</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Masters of Agility</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Can jump up to six times their height.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-full text-sm">check</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Professional Nappers</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Sleep 12-16 hours a day on average.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-full text-sm">check</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Purr Therapy</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Purring promotes healing and reduces stress.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Team Penguin Card -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden ambient-shadow-secondary border border-surface-variant transform transition-transform duration-300 hover:-translate-y-2 group mt-8 md:mt-0">
+<div class="h-48 bg-secondary/10 relative overflow-hidden">
+<img class="w-full h-full object-cover absolute inset-0 mix-blend-multiply opacity-80 group-hover:scale-110 transition-transform duration-500" data-alt="A delightful, high-quality photo of an Emperor penguin chick waddling across clean white ice, with a vibrant red architectural element softly blurred in the background. The lighting is crisp, bright daylight, enhancing the stark contrast of the penguin's plumage against the snowy setting. Modern playful aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcdRkvCI6ccLUoBEYx0O9yTWwOer57_zjNiDJhnXQWzy6tD6p0HNQPyHQd2gVv3AM8rpUOjMk3Lj-bOkucdud2X5mtx1QvnuN4jEgHdcsNQ5gYRHA2m6FAfRXe_h_0-j2t4Bt-LCZkOKspn-QDvSu9Ynxx23gJWraZ_hS5wpV2GuuzqttoKFY9uk-PKiWl5TIdflpEFMLj4kITAjLXLE1jl7CkaRWrTF7gxGBVSh-tzgAz4C762Kz4rw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-3xl">icecream</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Team Penguin</h3>
+</div>
+</div>
+<div class="p-6">
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary bg-secondary-fixed p-2 rounded-full text-sm">check</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Ocean Torpedoes</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Can swim up to 22 mph in bursts.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary bg-secondary-fixed p-2 rounded-full text-sm">check</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Tuxedo Style</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Countershading camouflages them in the water.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary bg-secondary-fixed p-2 rounded-full text-sm">check</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Loyal Partners</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Many species mate for life and share parenting duties.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<div class="pawsome-divider"></div>
+<!-- Daily Dose of Cute Gallery (Bento Grid) -->
+<section class="py-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-8 text-center">Daily Dose of Cute</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 rounded-[32px] overflow-hidden relative group ambient-shadow-primary border-4 border-white">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A highly detailed, playful photograph capturing a split-screen effect: one half showing a fluffy white cat asleep in a sunbeam on a modern mustard yellow chair, the other half showing a group of penguins diving off a clean, geometric ice shelf into vivid blue water. The image is bright, high-contrast, and embodies a tactile, modern playful style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-GmdkWgd5NzxEpVVF642XSXCq1Pk0LrW488J2H5cPuPGAWnQwKCi386gRnE9armmQ0ecAumG4OthwDSB2RD_b4BxBH4wK0KLJAmzPSFwT_JboiueQ3hLXvhp-FjZ6bL0vWXNXPiGndh-VzVKxEOZst14Xn4BPnrytw8O6uhti52oXshj-yD3O-jE9DJcicdpaMsmTmNVFMsxnVjtzOpgfGYmxMh5Q0_o-V8yU4ODjKxOogBrixgBdig"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+<p class="text-white font-label-bold text-label-bold">Sunbeams &amp; Splashdowns</p>
+</div>
+</div>
+<!-- Top Right 1 -->
+<div class="md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden relative group shadow-md border-2 border-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A close-up shot of a curious tuxedo cat peering directly into the camera lens with wide eyes. The background is a soft, solid mint green color, providing a clean, minimalist backdrop that makes the cat's features pop. Bright, cheerful lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfsfOVwt7qlULbNjdaUsYZMK4cmgMUeSQQwyefskN9xk4eeVcaGOgx5P0PmSs_JKvqDPOhlITaOAcTRqWfNid-0cl20wwtqZ1xLOisjtcUHeznBOBbkPfz0r2geRK2WrsaaWVOYZNPLuzQ8B1HDig9YfZ9-SKreU8_e-chn88UkXqUYMQoFwR8-eHP1h8_c6ZmZGzCiYstOQz4-4-CNGXF_GiwJi7F0mdXuP5qSHJOHDRltUB--Q8yyw"/>
+</div>
+<!-- Top Right 2 -->
+<div class="md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden relative group shadow-md border-2 border-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-quality, playful photograph of a macaroni penguin with its distinctive yellow crest feathers blowing in a gentle breeze. The background is a soft, solid sky blue. The mood is lighthearted and energetic, with sharp details and bright, modern lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXEj6sDHGXKi5AloshxG4txriYzQ9MTPh8JL5mgZbTH7wq_TlZsGoWZvJCAQnqj1a-ggxU-RVIkb4BmmgUBRqvacYnp1wUzj1wr6uMxUnJq14WpdTmP6CPp7g9G0fVrDvMwrgG31M4tvOrF1A_LQyek7UcK4RsL8mWQcVno-tcwYDrLvIZBk_Tszk1mv5Hdb1xCgesLYLE3ycJs5sliAiZHaHBtHeI8mFSlkHaIcLUxt8auP1f_j5S6w"/>
+</div>
+<!-- Bottom Right Wide -->
+<div class="md:col-span-2 md:row-span-1 rounded-2xl overflow-hidden relative group bg-tertiary-fixed p-6 flex flex-col justify-center items-center text-center ambient-shadow-primary">
+<span class="material-symbols-outlined text-tertiary text-5xl mb-2">auto_awesome</span>
+<h3 class="font-headline-md text-headline-md text-on-tertiary-fixed mb-2">Submit Your Pet!</h3>
+<p class="font-body-md text-body-md text-on-tertiary-fixed-variant mb-4">Want your furry or feathery friend featured?</p>
+<button class="bg-tertiary text-on-tertiary font-label-bold text-label-bold px-6 py-2 rounded-full hover:bg-tertiary-container transition-colors">
+                        Upload Photo
+                    </button>
+</div>
+</div>
+</section>
+<div class="pawsome-divider"></div>
+<!-- Adopt a Friend Section -->
+<section class="py-lg mb-xl bg-inverse-on-surface rounded-[40px] p-8 md:p-12 relative overflow-hidden">
+<!-- Decorative circle -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full blur-3xl opacity-10 translate-x-1/3 -translate-y-1/3"></div>
+<div class="relative z-10 text-center mb-10">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-4">Ready to Adopt?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Give a loving home to a whiskered companion. (Penguins are best left in the wild, but you can symbolically adopt one!)</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+<!-- Adoption Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-surface-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="A portrait of an adorable, fluffy grey kitten looking sweetly at the camera. The background is a clean, solid soft pink, fitting perfectly into a light-mode, modern playful design system. Bright, soft lighting emphasizes the kitten's soft fur and innocent expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5es07drcsH0IlKfUqc_zAOlAUDTgY7BYoiWhJlxSiaM4z40hVQHwKFWpObz_dpJbSCzwcn61RQ8d4w7qSKwMSrXPGRRh9Z0HpU-aKTl25QRDoLNfFdm7T1Ggfm1pdnzyvOI73-KxEUYffTjkjnxjnBUwgh2A5PlCQ-EVOX6HYTrMIdSYWYlYcgwJ0B2aPza6o7JLQhBy2GFnOxj6AenjcjaChJxUn0PWyhekKeV63xv88w0KE2XyxpQ"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Luna</h3>
+<span class="inline-block bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full my-2">2 Months • Playful</span>
+<button class="mt-4 w-full bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold py-2 rounded-xl hover:bg-primary-fixed-dim transition-colors">Meet Luna</button>
+</div>
+<!-- Adoption Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-surface-variant flex flex-col items-center text-center hover:shadow-md transition-shadow transform md:-translate-y-4">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-secondary-fixed">
+<img class="w-full h-full object-cover" data-alt="A portrait of a distinguished older orange tabby cat with a gentle, wise expression. The background is a clean, solid soft teal, fitting perfectly into a light-mode, modern playful design system. Bright, soft lighting highlights the texture of the cat's fur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIjWF2EUgqi8qiYYAoZynrlGLuEQH9yJ8Uz7gxwr470c7KKnt83Bj_JVPo7Z9StU1JIofeZ8d7IV89cCw9kK5l_ojiBmGbLpg6EVN4HOrpuKPWECkJsmz-p7WCSYnB0bvz3UUHMjAoV4Vj9Q994c6mRmVIWlS0kF6kNcfcK2QmGQfLbH9NBIH1HdW_O-T_YWYeMtO9MAO55IyNMTo-GYU7cRPsjiNmY5lNsgrjcx_yL9jzFwSBPOCCRw"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Oliver</h3>
+<span class="inline-block bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full my-2">5 Years • Chill</span>
+<button class="mt-4 w-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-bold text-label-bold py-2 rounded-xl hover:bg-secondary-fixed-dim transition-colors">Meet Oliver</button>
+</div>
+<!-- Adoption Card 3 (Symbolic Penguin) -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-surface-variant flex flex-col items-center text-center hover:shadow-md transition-shadow">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-tertiary-fixed">
+<img class="w-full h-full object-cover" data-alt="A fun, stylized 3D illustration of a cute Adelie penguin wearing a tiny, comically oversized red scarf. The background is a soft, solid pale yellow. The style is highly tactile, 'squishy', and vibrant, matching a modern playful UI aesthetic. Bright, even lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDKRJxuU-sP2tXUJBvQsTv6P0bH3aIPlH6Zq6skbomqtTGfy88JJYjU7VZiIWrg8Vj-x64MDi2VfE_EeIALTmxCXtOjtQqJ_QiVxvJkJeYX1_yjzShk3ufXvVU6murdAzn98K1Wl6oz67UPxcnGT2X3Slo7XEMpEptzxz0x9M_LQWYm31TFikeINyOA4ry0Od4nmRcUFDQGi9Ms7qo2MAAjqR1JQWcVtOvjyYir3hiIknBnr9VxaiFUw"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Pippin</h3>
+<span class="inline-block bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded-full my-2">Wild • Symbolic</span>
+<button class="mt-4 w-full bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold py-2 rounded-xl hover:bg-tertiary-fixed-dim transition-colors">Support Pippin</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest full-width rounded-t-xl bg-on-surface dark:bg-surface-container-lowest flat no shadows flex flex-col items-center gap-md px-margin-desktop py-lg w-full mt-auto">
+<div class="font-headline-md text-headline-md font-black text-primary-fixed dark:text-primary mb-4">
+            Paws &amp; Flippers
+        </div>
+<div class="flex flex-wrap justify-center gap-6 mb-6">
+<a class="font-label-bold text-label-bold text-surface-variant dark:text-on-surface-variant hover:text-secondary-fixed dark:hover:text-secondary transition-colors active:opacity-80" href="#">Privacy Policy</a>
+<a class="font-label-bold text-label-bold text-surface-variant dark:text-on-surface-variant hover:text-secondary-fixed dark:hover:text-secondary transition-colors active:opacity-80" href="#">Contact Us</a>
+<a class="font-label-bold text-label-bold text-surface-variant dark:text-on-surface-variant hover:text-secondary-fixed dark:hover:text-secondary transition-colors active:opacity-80" href="#">Support the Animals</a>
+<a class="font-label-bold text-label-bold text-surface-variant dark:text-on-surface-variant hover:text-secondary-fixed dark:hover:text-secondary transition-colors active:opacity-80" href="#">Volunteer</a>
+</div>
+<p class="font-body-md text-body-md text-outline">
+            © 2024 Paws &amp; Flippers. Making the world a bit more whiskered and waddly.
+        </p>
+</footer>
+</body></html>
