@@ -27,9 +27,14 @@
 👉 **[Ver Grabación y Resumen en Microsoft Teams](https://cesdenet-my.sharepoint.com/:v:/g/personal/educaciondigital2_cesde_edu_co/IQAR3aGJpHUVRZ5WT1JwYuzyAf-QoAhfQ15utr60sOuXSUo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=loa3M2)**
 
 
+
 ---
 
+### 🔗 Clase semana 8
+👉 **[Ver Grabación y Resumen en Microsoft Teams](https://cesdenet-my.sharepoint.com/:v:/g/personal/educaciondigital2_cesde_edu_co/IQDgVfPPcEyVTbN3SWOZdCKcAVEVYqtpMSmDBY-2za8pEBA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8dz9hJ)**
 
+
+---
 
 
 
