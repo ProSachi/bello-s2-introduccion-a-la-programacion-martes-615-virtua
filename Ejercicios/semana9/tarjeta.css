@@ -1,0 +1,90 @@
+/* 1. EL "RESET" OBLIGATORIO */
+/* Esto asegura que el padding no sume al ancho total */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Definimos la base: 1rem = 16px (Valor por defecto del navegador) */
+html {
+  font-size: 16px;
+}
+
+/* Estilos generales para el cuerpo (opcional, para que se vea mejor) */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0; /* Fondo gris para ver mejor la tarjeta blanca */
+  padding-top: 20px;
+}
+
+/* 2. COMPONENTE CARD */
+.card {
+  /* Ancho fijo para demo. 
+               Si quitas el box-sizing de arriba, este ancho crecería a 348px aprox */
+  width: 300px;
+  /* Espaciado Interno: 1.5rem = 24px */
+  /* Este espacio empuja el contenido hacia adentro */
+  padding: 1.5rem;
+  /* Borde */
+  border: 2px solid #333;
+  /* Curvatura */
+  border-radius: 0.5rem; /* 8px */
+  /* Espaciado Externo para separar de otras tarjetas */
+  /* 2rem (32px) arriba/abajo, Auto (centrado) a los lados */
+  margin: 2rem auto;
+  background-color: #f9f9f9;
+}
+
+.card h2 {
+  font-size: 1.5rem; /* 24px */
+  margin-bottom: 1rem; /* Separación del título al párrafo */
+  color: #2c3e50;
+}
+
+.card p {
+  line-height: 1.5; /* Altura de línea para mejorar lectura */
+  color: #555;
+}
+
+.btn-comprar {
+  /* Por defecto los enlaces (a) son elementos "inline", no aceptan padding/margin vertical bien. 
+       Lo convertimos a bloque en línea para poder aplicarle el modelo de caja */
+  display: inline-block;
+
+  /* Colores base */
+  background-color: #3498db;
+  color: white;
+  text-decoration: none; /* Quitamos el subrayado del enlace */
+  font-family: Arial, sans-serif;
+
+  /* 1. Padding: Espacio interior para que el texto "respire" */
+  padding: 1rem 2rem; /* Arriba/abajo 16px, Izq/Der 32px */
+
+  /* 2. Border: Un borde sutil más oscuro que el fondo */
+  border: 2px solid #2980b9;
+
+  /* 3. Border-radius: Suavizamos las esquinas */
+  border-radius: 8px;
+
+  /* 4. Margin: Lo separamos de lo que sea que haya arriba o abajo */
+  margin-top: 1.5rem;
+}
+
+.botones{
+    background-color: #3498db;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnlink{
+    background-color: #2980b9;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    border: solid 1px #9266f8;
+    color: #e0e0e0;
+    cursor: pointer;
+}
