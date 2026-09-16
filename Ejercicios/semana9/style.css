@@ -1,0 +1,34 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body{
+    background-color: aqua;
+}
+
+div{
+    margin: 40px;
+    padding: 15px;
+    border: solid;
+    background-color: blue;
+}
+
+div p{
+    color: brown;
+}
+
+div > p{
+    color: rgb(43, 226, 101);
+}
+
+.parrafo{
+    color: rgb(236, 128, 46);
+}
+
+.contenedor-principal{
+
+
+    
+}
