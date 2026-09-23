@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+}
+
+.contenedor {
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+}
+
+p{
+    margin-top: 30px;
+
+}

@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <title>CESDE | Filial Comfama</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main> :first-child {
+                margin-top: 0 !important;
+            }
+
+            main> :last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#acf1d6", "primary-fixed": "#ffd9df", "brand-magenta-dark": "#C00052", "on-secondary-fixed-variant": "#474646", "outline-variant": "#e4bdc3", "on-tertiary-fixed": "#002117", "primary-container": "#e30666", "surface-dim": "#dcd9d9", "on-error": "#ffffff", "on-surface": "#1c1b1b", "obsidian-surface": "#121212", "tertiary": "#216752", "brand-magenta-glow": "rgba(227, 6, 102, 0.28)", "surface-container-low": "#f6f3f2", "on-secondary-fixed": "#1c1b1b", "surface-container": "#f0eded", "tertiary-fixed-dim": "#90d4ba", "light-canvas": "#F8F9FA", "obsidian-base": "#0A0A0A", "accent-yellow-bg": "#FEF9C3", "light-surface-subtle": "#EEF2F6", "surface": "#fcf9f8", "surface-container-highest": "#e5e2e1", "primary": "#b60050", "on-tertiary-container": "#f2fff7", "on-primary-fixed": "#3f0017", "on-surface-variant": "#5b3f45", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#c9c6c5", "outline": "#8f6f74", "on-primary-fixed-variant": "#90003d", "inverse-primary": "#ffb1c1", "inverse-surface": "#313030", "accent-mint": "#94D8BE", "obsidian-card": "#181818", "surface-container-high": "#eae7e7", "on-secondary": "#ffffff", "surface-variant": "#e5e2e1", "accent-yellow": "#FDE68A", "secondary-fixed": "#e5e2e1", "light-border": "#E2E8F0", "inverse-on-surface": "#f3f0ef", "brand-magenta": "#E30666", "on-primary-container": "#fffbfa", "error": "#ba1a1a", "accent-mint-bg": "#E8F7F1", "on-primary": "#ffffff", "tertiary-container": "#3d806a", "on-tertiary-fixed-variant": "#00513e", "accent-sky-dark": "#1E6091", "surface-container-lowest": "#ffffff", "light-surface": "#FFFFFF", "primary-fixed-dim": "#ffb1c1", "accent-lilac-bg": "#FAF5FF", "accent-sky": "#D9ECF9", "surface-tint": "#bc0053", "accent-lilac": "#E9D5FF", "background": "#fcf9f8", "obsidian-border": "rgba(255, 255, 255, 0.12)", "surface-bright": "#fcf9f8", "on-error-container": "#93000a", "on-secondary-container": "#656464", "on-background": "#1c1b1b", "secondary": "#5f5e5e", "secondary-container": "#e5e2e1" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "gutter-mobile": "1rem", "margin-desktop-max": "80rem", "margin": "2rem", "space-3xl": "6rem", "space-2xl": "4rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-xl": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-xl": ["20px", { "lineHeight": "32px", "fontWeight": "400" }], "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-xl": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-hero-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+
+<body class="bg-background font-body-md text-on-surface antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 w-full">
+        <div class="w-full bg-obsidian-base text-inverse-on-surface px-space-lg">
+            <div
+                class="max-w-margin-desktop-max mx-auto h-10 flex items-center justify-between font-label-sm text-label-sm">
+                <nav aria-label="Accesos institucionales directos" class="flex items-center gap-space-lg"
+                    data-active-classes="text-on-primary font-bold underline"><a
+                        class="text-surface-dim hover:text-light-surface transition-colors" data-path="pago-en-linea"
+                        href="#">Pago en línea</a><a class="text-surface-dim hover:text-light-surface transition-colors"
+                        data-path="aspirantes" href="#">Aspirantes</a><a
+                        class="text-surface-dim hover:text-light-surface transition-colors" data-path="estudiantes"
+                        href="#">Estudiantes</a><a class="text-surface-dim hover:text-light-surface transition-colors"
+                        data-path="docentes" href="#">Docentes</a><a
+                        class="text-surface-dim hover:text-light-surface transition-colors" data-path="colaboradores"
+                        href="#">Colaboradores</a></nav>
+                <div class="flex items-center gap-space-md">
+                    <div class="flex items-center rounded-full bg-obsidian-surface px-space-sm py-space-xs"><span
+                            class="material-symbols-outlined text-surface-dim text-body-md mr-space-xs">search</span><input
+                            class="bg-transparent text-label-sm text-light-surface placeholder:text-surface-dim focus:outline-none w-36 lg:w-48"
+                            placeholder="Buscar en Cesde..." type="search" /></div><a
+                        class="flex items-center gap-space-xs rounded-full bg-obsidian-card px-space-md py-1 text-light-surface hover:bg-brand-magenta hover:text-on-primary transition-all"
+                        data-path="sistema-academico-nuevosi" href="#"><span
+                            class="w-2 h-2 rounded-full bg-brand-magenta"></span><span>Sistema académico
+                            nuevosí</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1UY8UmjdonGN_nUaJA8lom6nbt3E9wTxvq2U7G5wR-DVo1DHTtChjZ1vRqtzcgZlg2UZfoA50aGuSUi0SiVZbrrlhLnOHRddOrKU8nArgoYM9NlzugPBfMyJUJTX40VACsGi-NtEHRBqIPuo2z4OT9roIZ2DBlAHpvb1sR4Z4bjOdzZ9Cmd9Aq4c3G1-H2mD0bxrVXa8J-AgjrfddKptk4Hea2L3sPjsQ_50p0UwDGYJoq_6RnUOzroK2I3" />
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-light-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-lg">
+            <div class="max-w-margin-desktop-max mx-auto h-20 flex items-center justify-between"><a
+                    class="flex items-center gap-space-sm group" data-path="inicio" href="#">
+                    <div class="flex items-center tracking-tight"><span
+                            class="font-display-hero text-headline-md font-extrabold text-brand-magenta group-hover:text-brand-magenta-dark transition-colors">CESDE</span><span
+                            class="mx-space-xs text-outline font-headline-sm">|</span><span
+                            class="font-headline-sm text-headline-sm font-bold text-on-surface lowercase">comfama</span>
+                    </div>
+                </a>
+                <nav aria-label="Navegación principal" class="hidden xl:flex items-center gap-space-lg"
+                    data-active-classes="text-primary font-bold"><a
+                        class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg"
+                        data-path="nosotros" href="#">Nosotros</a><a
+                        class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg"
+                        data-path="grupos-empresariales" href="#">Grupos Empresariales</a><a
+                        class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg"
+                        data-path="nuestros-programas" href="#">Nuestros Programas</a><a
+                        class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg"
+                        data-path="escuelas" href="#">Escuelas</a><a
+                        class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg"
+                        data-path="sedes" href="#">Sedes</a><a
+                        class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg"
+                        data-path="nuestros-servicios" href="#">Nuestros Servicios</a><a
+                        class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg"
+                        data-path="contacto" href="#">Contacto</a></nav>
+                <div class="flex items-center gap-space-md"><a
+                        class="rounded-full bg-brand-magenta px-space-lg py-space-sm font-label-lg text-label-lg text-on-primary shadow-[0_4px_20px_rgba(227,6,102,0.28)] hover:bg-brand-magenta-dark hover:shadow-[0_6px_24px_rgba(227,6,102,0.45)] transition-all transform hover:-translate-y-0.5"
+                        data-path="inscripcion" href="#">Inscríbete</a></div>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-background min-h-[calc(100vh-280px)]">
+        <div class="flex flex-col w-full">
+            <!-- HERO SECTION: Obsidian Canvas with Organic Magenta Visual Geometry -->
+            <section
+                class="relative w-full bg-obsidian-base text-inverse-on-surface overflow-hidden py-space-3xl px-space-lg lg:px-space-2xl">
+                <!-- Ambient Luminous Glow Underlay -->
+                <div
+                    class="absolute -top-32 right-0 w-[580px] h-[580px] bg-brand-magenta/20 blur-[130px] rounded-full pointer-events-none">
+                </div>
+                <div
+                    class="absolute bottom-0 left-1/4 w-[420px] h-[420px] bg-primary/15 blur-[120px] rounded-full pointer-events-none">
+                </div>
+                <div
+                    class="max-w-margin-desktop-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center relative z-10">
+                    <!-- Left Column: Typography & Action Triggers -->
+                    <div class="lg:col-span-7 space-y-space-xl">
+                        <!-- Eyebrow Pill -->
+                        <div
+                            class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-obsidian-card border border-obsidian-border backdrop-blur-md">
+                            <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-magenta animate-pulse"></span>
+                            <span class="font-label-sm text-label-sm text-surface-dim uppercase tracking-wider">CESDE |
+                                Comfama · 54 años de trayectoria</span>
+                        </div>
+                        <!-- Hero Headline -->
+                        <div class="space-y-space-md">
+                            <h1
+                                class="font-display-hero text-headline-xl lg:text-display-hero text-light-surface leading-[1.08] tracking-tight">
+                                54 años demostrando que con <span
+                                    class="text-brand-magenta font-extrabold drop-shadow-[0_2px_18px_rgba(227,6,102,0.35)]">Técnica
+                                    + Humanismo</span> se hace futuro.
+                            </h1>
+                            <p class="font-body-xl text-body-xl text-surface-dim max-w-2xl leading-relaxed">
+                                Entre las empresas y los territorios. Entre las aspiraciones y las realidades. Entre el
+                                saber y el hacer.
+                            </p>
+                        </div>
+                        <!-- CTA Cluster -->
+                        <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+                            <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-brand-magenta text-on-primary font-label-lg text-label-lg shadow-[0_6px_28px_rgba(227,6,102,0.45)] hover:bg-brand-magenta-dark hover:shadow-[0_8px_32px_rgba(227,6,102,0.6)] transition-all transform hover:-translate-y-0.5"
+                                data-path="nuestros-programas" href="#">
+                                <span>Explorar programas técnicos</span>
+                                <span class="material-symbols-outlined text-headline-sm">arrow_forward</span>
+                            </a>
+                            <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-obsidian-card hover:bg-obsidian-surface text-light-surface border border-obsidian-border font-label-lg text-label-lg transition-all"
+                                data-path="grupos-empresariales" href="#">
+                                <span
+                                    class="material-symbols-outlined text-headline-sm text-brand-magenta">business_center</span>
+                                <span>Conoce Grupos Empresariales</span>
+                            </a>
+                        </div>
+                        <!-- Micro Impact Numbers Bar -->
+                        <div
+                            class="grid grid-cols-2 sm:grid-cols-3 gap-space-lg pt-space-lg border-t border-obsidian-border">
+                            <div>
+                                <div
+                                    class="font-headline-xl text-headline-lg font-bold text-light-surface tracking-tight">
+                                    94%</div>
+                                <div class="font-label-sm text-label-sm text-surface-dim">Empleabilidad vinculada</div>
+                            </div>
+                            <div>
+                                <div
+                                    class="font-headline-xl text-headline-lg font-bold text-light-surface tracking-tight">
+                                    100+</div>
+                                <div class="font-label-sm text-label-sm text-surface-dim">Convenios empresariales</div>
+                            </div>
+                            <div class="hidden sm:block">
+                                <div
+                                    class="font-headline-xl text-headline-lg font-bold text-accent-mint tracking-tight">
+                                    Top 1</div>
+                                <div class="font-label-sm text-label-sm text-surface-dim">Educación técnica en Antioquia
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Visual Brand Mosaic & Anniversary Motifs -->
+                    <div class="lg:col-span-5 relative">
+                        <div
+                            class="relative w-full aspect-[4/3] sm:aspect-square max-w-lg mx-auto flex items-center justify-center">
+                            <!-- Large Brand 54 Architectural Graphic Motif -->
+                            <div
+                                class="absolute inset-0 rounded-3xl overflow-hidden bg-obsidian-card border border-obsidian-border p-space-sm shadow-2xl">
+                                <img alt="CESDE 54 Años de Trayectoria Técnica y Humanista"
+                                    class="w-full h-full object-cover rounded-2xl filter brightness-95 contrast-105"
+                                    src="https://lh3.googleusercontent.com/aida/AEtjO1UY8UmjdonGN_nUaJA8lom6nbt3E9wTxvq2U7G5wR-DVo1DHTtChjZ1vRqtzcgZlg2UZfoA50aGuSUi0SiVZbrrlhLnOHRddOrKU8nArgoYM9NlzugPBfMyJUJTX40VACsGi-NtEHRBqIPuo2z4OT9roIZ2DBlAHpvb1sR4Z4bjOdzZ9Cmd9Aq4c3G1-H2mD0bxrVXa8J-AgjrfddKptk4Hea2L3sPjsQ_50p0UwDGYJoq_6RnUOzroK2I3" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-obsidian-base via-transparent to-transparent opacity-75">
+                                </div>
+                            </div>
+                            <!-- Glassmorphic Floating Badge Top-Right -->
+                            <div
+                                class="absolute -top-4 -right-4 bg-obsidian-surface/90 backdrop-blur-xl border border-obsidian-border rounded-2xl p-space-md shadow-xl flex items-center gap-space-sm z-20">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-brand-magenta/20 flex items-center justify-center text-brand-magenta">
+                                    <span class="material-symbols-outlined text-headline-md">verified</span>
+                                </div>
+                                <div>
+                                    <p class="font-label-lg text-label-lg text-light-surface leading-tight">Filial
+                                        Comfama</p>
+                                    <p class="font-label-sm text-label-sm text-surface-dim">Propósito Social</p>
+                                </div>
+                            </div>
+                            <!-- Glassmorphic Floating Program Showcase Bottom-Left -->
+                            <div
+                                class="absolute -bottom-6 -left-4 sm:-left-6 bg-obsidian-surface/95 backdrop-blur-xl border border-obsidian-border rounded-2xl p-space-md shadow-2xl max-w-xs z-20">
+                                <div class="flex items-center gap-space-sm mb-space-xs">
+                                    <span
+                                        class="px-space-xs py-0.5 rounded bg-tertiary/40 text-tertiary-fixed font-label-sm text-label-sm font-semibold">Fast-Track</span>
+                                    <span class="font-label-sm text-label-sm text-surface-dim">1 año intensivo</span>
+                                </div>
+                                <p class="font-headline-sm text-headline-sm text-light-surface font-semibold">Técnicas
+                                    Laborales con Prácticas</p>
+                                <p class="font-body-md text-body-md text-surface-dim mt-space-xs">Conexión con empresas
+                                    aliadas desde el primer semestre.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- QUICK ACCESS FLOATING TILES (Overlapping between Hero & Editorial Surface) -->
+            <section class="relative z-30 px-space-lg lg:px-space-2xl -mt-10 lg:-mt-14">
+                <div class="max-w-margin-desktop-max mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+                        <!-- Tile 1: Matrículas y Liquidación -->
+                        <a class="group bg-light-surface rounded-2xl p-space-lg shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(227,6,102,0.12)] border border-light-border hover:-translate-y-1.5 transition-all flex flex-col items-start justify-between min-h-[160px]"
+                            href="https://nuevosi.cesde.edu.co/matriculas/liquidaciones-matricula" rel="noopener"
+                            target="_blank">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-accent-sky flex items-center justify-center text-accent-sky-dark group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-headline-md">receipt_long</span>
+                            </div>
+                            <div class="w-full mt-space-md">
+                                <span
+                                    class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors block">Matrículas
+                                    y liquidación</span>
+                                <span
+                                    class="font-body-md text-body-md text-secondary mt-1 flex items-center justify-between">
+                                    <span>Pagos en línea y órdenes</span>
+                                    <span
+                                        class="material-symbols-outlined text-headline-sm text-brand-magenta group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </span>
+                            </div>
+                        </a>
+                        <!-- Tile 2: Sistema Académico Nuevosí -->
+                        <a class="group bg-light-surface rounded-2xl p-space-lg shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(227,6,102,0.12)] border border-light-border hover:-translate-y-1.5 transition-all flex flex-col items-start justify-between min-h-[160px]"
+                            href="https://nuevosi.cesde.edu.co/iniciarsesion" rel="noopener" target="_blank">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-accent-mint-bg flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-headline-md">laptop_mac</span>
+                            </div>
+                            <div class="w-full mt-space-md">
+                                <span
+                                    class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors block">Sistema
+                                    académico nuevosí</span>
+                                <span
+                                    class="font-body-md text-body-md text-secondary mt-1 flex items-center justify-between">
+                                    <span>Notas, horarios y trámites</span>
+                                    <span
+                                        class="material-symbols-outlined text-headline-sm text-brand-magenta group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </span>
+                            </div>
+                        </a>
+                        <!-- Tile 3: Crédito y Financiación -->
+                        <a class="group bg-light-surface rounded-2xl p-space-lg shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(227,6,102,0.12)] border border-light-border hover:-translate-y-1.5 transition-all flex flex-col items-start justify-between min-h-[160px]"
+                            data-path="opciones-de-pago" href="#">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-accent-yellow-bg flex items-center justify-center text-on-secondary-fixed-variant group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-headline-md">credit_card</span>
+                            </div>
+                            <div class="w-full mt-space-md">
+                                <span
+                                    class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors block">Crédito
+                                    y financiación</span>
+                                <span
+                                    class="font-body-md text-body-md text-secondary mt-1 flex items-center justify-between">
+                                    <span>Comfama y aliados directos</span>
+                                    <span
+                                        class="material-symbols-outlined text-headline-sm text-brand-magenta group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </span>
+                            </div>
+                        </a>
+                        <!-- Tile 4: Educación Digital -->
+                        <a class="group bg-light-surface rounded-2xl p-space-lg shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_36px_rgba(227,6,102,0.12)] border border-light-border hover:-translate-y-1.5 transition-all flex flex-col items-start justify-between min-h-[160px]"
+                            data-path="educaciondigital" href="#">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-accent-lilac-bg flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-headline-md">school</span>
+                            </div>
+                            <div class="w-full mt-space-md">
+                                <span
+                                    class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors block">Educación
+                                    Digital</span>
+                                <span
+                                    class="font-body-md text-body-md text-secondary mt-1 flex items-center justify-between">
+                                    <span>Campus virtual y eCesde</span>
+                                    <span
+                                        class="material-symbols-outlined text-headline-sm text-brand-magenta group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- WELCOME & EDITORIAL VALUE PROPOSITION -->
+            <section class="w-full py-space-3xl px-space-lg lg:px-space-2xl bg-background">
+                <div class="max-w-margin-desktop-max mx-auto space-y-space-2xl">
+                    <!-- Top Title Split -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-end">
+                        <div class="lg:col-span-7 space-y-space-sm">
+                            <div
+                                class="inline-block font-label-md text-label-md uppercase tracking-wider text-brand-magenta font-bold">
+                                Modelo Pedagógico Integral
+                            </div>
+                            <h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold">
+                                ¡Te damos la bienvenida a Cesde!
+                            </h2>
+                            <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                                Nos alegra acompañarte a <strong class="text-on-surface font-semibold">formarte como
+                                    Técnico Laboral</strong> en una institución que cree en el poder transformador de la
+                                educación.
+                            </p>
+                        </div>
+                        <div
+                            class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-2xl border border-light-border">
+                            <div
+                                class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-space-xs text-brand-magenta mb-space-xs">
+                                <span class="material-symbols-outlined">verified</span>
+                                Técnica + Humanismo
+                            </div>
+                            <p class="font-body-md text-body-md text-secondary">
+                                Diseñamos con empresas, acompañamos con humanismo y formamos con propósito. Aquí se
+                                aprende con retos reales, inglés para el trabajo e inteligencia artificial.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 3 Key Pillars Bento -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+                        <!-- Pillar 1: Retos con empresas -->
+                        <div
+                            class="bg-light-surface rounded-2xl p-space-xl border border-light-border shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-sky flex items-center justify-center text-accent-sky-dark mb-space-lg">
+                                <span class="material-symbols-outlined text-headline-md">hub</span>
+                            </div>
+                            <h3
+                                class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-sm group-hover:text-brand-magenta transition-colors">
+                                Retos reales con empresas
+                            </h3>
+                            <p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                Diseño curricular cocreado con líderes de industria. Resuelve desafíos vigentes del
+                                sector productivo desde las primeras semanas de clase.
+                            </p>
+                            <div
+                                class="mt-space-lg pt-space-md border-t border-light-border/60 flex items-center text-label-md text-secondary font-semibold">
+                                <span>+2,400 plazas de prácticas anuales</span>
+                            </div>
+                        </div>
+                        <!-- Pillar 2: Inglés Slang -->
+                        <div
+                            class="bg-light-surface rounded-2xl p-space-xl border border-light-border shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-lilac-bg flex items-center justify-center text-primary mb-space-lg">
+                                <span class="material-symbols-outlined text-headline-md">translate</span>
+                            </div>
+                            <h3
+                                class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-sm group-hover:text-brand-magenta transition-colors">
+                                Inglés para el trabajo (Slang)
+                            </h3>
+                            <p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                Formación bilingüe aplicada y certificable con la plataforma líder en inglés profesional
+                                adaptado a tu campo específico de especialidad.
+                            </p>
+                            <div
+                                class="mt-space-lg pt-space-md border-t border-light-border/60 flex items-center text-label-md text-secondary font-semibold">
+                                <span>Acceso 100% subvencionado</span>
+                            </div>
+                        </div>
+                        <!-- Pillar 3: IA Platzi -->
+                        <div
+                            class="bg-light-surface rounded-2xl p-space-xl border border-light-border shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-mint-bg flex items-center justify-center text-tertiary mb-space-lg">
+                                <span class="material-symbols-outlined text-headline-md">psychology</span>
+                            </div>
+                            <h3
+                                class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-sm group-hover:text-brand-magenta transition-colors">
+                                IA aplicada (Convenio Platzi)
+                            </h3>
+                            <p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                Habilidades del futuro integradas en cada escuela. Domina herramientas generativas y
+                                automatización para potenciar tu productividad laboral.
+                            </p>
+                            <div
+                                class="mt-space-lg pt-space-md border-t border-light-border/60 flex items-center text-label-md text-secondary font-semibold">
+                                <span>Rutas certificadas en tecnología</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ESCUELAS DE FORMACIÓN: The 4 Signature Schools -->
+            <section class="w-full py-space-3xl px-space-lg lg:px-space-2xl bg-surface-container-low">
+                <div class="max-w-margin-desktop-max mx-auto space-y-space-2xl">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+                        <div>
+                            <span
+                                class="font-label-md text-label-md uppercase tracking-wider text-brand-magenta font-bold">Oferta
+                                Formativa</span>
+                            <h2
+                                class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold mt-1">
+                                Escuelas de Formación Técnica
+                            </h2>
+                            <p class="font-body-lg text-body-lg text-secondary max-w-xl mt-space-xs">
+                                Programas diseñados para responder a la demanda de los sectores que mueven la economía y
+                                generan empleo de calidad.
+                            </p>
+                        </div>
+                        <a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-brand-magenta hover:text-brand-magenta-dark font-bold transition-colors"
+                            data-path="nuestros-programas" href="#">
+                            <span>Ver todos los programas</span>
+                            <span class="material-symbols-outlined text-headline-sm">east</span>
+                        </a>
+                    </div>
+                    <!-- Schools Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+                        <!-- Escuela 1: Tecnología y Administración -->
+                        <div
+                            class="bg-light-surface rounded-2xl overflow-hidden border border-light-border shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all flex flex-col justify-between group">
+                            <div class="p-space-lg space-y-space-md">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="px-space-sm py-1 rounded-full bg-accent-mint-bg text-tertiary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                                        Tech &amp; Negocios
+                                    </span>
+                                    <span class="material-symbols-outlined text-tertiary">terminal</span>
+                                </div>
+                                <h3
+                                    class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors">
+                                    Escuela de Tecnología y Administración
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                    Desarrollo de software, ciberseguridad, analítica de datos, gestión contable y
+                                    operaciones logísticas modernas.
+                                </p>
+                                <div class="space-y-space-xs pt-space-xs">
+                                    <span class="block font-label-sm text-label-sm text-secondary">Programas
+                                        destacados:</span>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Desarrollo
+                                            Web</span>
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Ciberseguridad</span>
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Gestión
+                                            Empresarial</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-space-lg pt-0">
+                                <a class="inline-flex items-center justify-between w-full pt-space-md border-t border-light-border font-label-md text-label-md text-brand-magenta font-bold group-hover:translate-x-0.5 transition-all"
+                                    data-path="escuelas" href="#">
+                                    <span>Explorar programas</span>
+                                    <span class="material-symbols-outlined text-headline-sm">chevron_right</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Escuela 2: Industrias Creativas -->
+                        <div
+                            class="bg-light-surface rounded-2xl overflow-hidden border border-light-border shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all flex flex-col justify-between group">
+                            <div class="p-space-lg space-y-space-md">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="px-space-sm py-1 rounded-full bg-accent-lilac-bg text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                                        Creatividad &amp; Media
+                                    </span>
+                                    <span class="material-symbols-outlined text-primary">palette</span>
+                                </div>
+                                <h3
+                                    class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors">
+                                    Escuela de Industrias Creativas
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                    Diseño gráfico digital, producción audiovisual, animación 3D, fotografía comercial y
+                                    estrategias de marketing de contenidos.
+                                </p>
+                                <div class="space-y-space-xs pt-space-xs">
+                                    <span class="block font-label-sm text-label-sm text-secondary">Programas
+                                        destacados:</span>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Diseño
+                                            Gráfico</span>
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Audiovisuales</span>
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Marketing</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-space-lg pt-0">
+                                <a class="inline-flex items-center justify-between w-full pt-space-md border-t border-light-border font-label-md text-label-md text-brand-magenta font-bold group-hover:translate-x-0.5 transition-all"
+                                    data-path="escuelas" href="#">
+                                    <span>Explorar programas</span>
+                                    <span class="material-symbols-outlined text-headline-sm">chevron_right</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Escuela 3: Gastronomía, Turismo y Hospitalidad -->
+                        <div
+                            class="bg-light-surface rounded-2xl overflow-hidden border border-light-border shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all flex flex-col justify-between group">
+                            <div class="p-space-lg space-y-space-md">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="px-space-sm py-1 rounded-full bg-accent-yellow-bg text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                                        Hospitalidad
+                                    </span>
+                                    <span
+                                        class="material-symbols-outlined text-on-secondary-fixed-variant">restaurant</span>
+                                </div>
+                                <h3
+                                    class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors">
+                                    Escuela de Gastronomía &amp; Turismo
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                    Cocina internacional, pastelería y panadería artesanal, barismo de especialidad y
+                                    dirección de servicios turísticos y hoteleros.
+                                </p>
+                                <div class="space-y-space-xs pt-space-xs">
+                                    <span class="block font-label-sm text-label-sm text-secondary">Programas
+                                        destacados:</span>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Cocina
+                                            Integral</span>
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Barismo</span>
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Hotelería</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-space-lg pt-0">
+                                <a class="inline-flex items-center justify-between w-full pt-space-md border-t border-light-border font-label-md text-label-md text-brand-magenta font-bold group-hover:translate-x-0.5 transition-all"
+                                    data-path="escuelas" href="#">
+                                    <span>Explorar programas</span>
+                                    <span class="material-symbols-outlined text-headline-sm">chevron_right</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Escuela 4: Salud y Cuidado -->
+                        <div
+                            class="bg-light-surface rounded-2xl overflow-hidden border border-light-border shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all flex flex-col justify-between group">
+                            <div class="p-space-lg space-y-space-md">
+                                <div class="flex items-center justify-between">
+                                    <span
+                                        class="px-space-sm py-1 rounded-full bg-accent-sky text-accent-sky-dark font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                                        Cuidado &amp; Bienestar
+                                    </span>
+                                    <span class="material-symbols-outlined text-accent-sky-dark">favorite</span>
+                                </div>
+                                <h3
+                                    class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors">
+                                    Escuela de Salud y Cuidado
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                    Auxiliar en enfermería con prácticas clínicas, servicios farmacéuticos, atención a
+                                    la primera infancia y cuidado humanizado.
+                                </p>
+                                <div class="space-y-space-xs pt-space-xs">
+                                    <span class="block font-label-sm text-label-sm text-secondary">Programas
+                                        destacados:</span>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Enfermería</span>
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Servicios
+                                            Farmacia</span>
+                                        <span
+                                            class="text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Primera
+                                            Infancia</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-space-lg pt-0">
+                                <a class="inline-flex items-center justify-between w-full pt-space-md border-t border-light-border font-label-md text-label-md text-brand-magenta font-bold group-hover:translate-x-0.5 transition-all"
+                                    data-path="escuelas" href="#">
+                                    <span>Explorar programas</span>
+                                    <span class="material-symbols-outlined text-headline-sm">chevron_right</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CINCO PASOS CLAVE PARA INICIAR TUS CLASES (Student Onboarding Flow) -->
+            <section
+                class="w-full py-space-3xl px-space-lg lg:px-space-2xl bg-light-surface border-y border-light-border">
+                <div class="max-w-margin-desktop-max mx-auto space-y-space-2xl">
+                    <div class="text-center max-w-2xl mx-auto space-y-space-xs">
+                        <span
+                            class="font-label-md text-label-md uppercase tracking-wider text-brand-magenta font-bold">Ruta
+                            del Estudiante Cesde</span>
+                        <h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold">
+                            Cinco pasos clave para iniciar tus clases
+                        </h2>
+                        <p class="font-body-md text-body-md text-secondary">
+                            Acompañamiento integral para estudiantes nuevos y antiguos en el arranque de su semestre
+                            formativo.
+                        </p>
+                    </div>
+                    <!-- Step Cards Horizontal Flow -->
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-space-md relative">
+                        <!-- Step 1 -->
+                        <div
+                            class="bg-surface-container-low rounded-2xl p-space-lg border border-light-border flex flex-col justify-between relative group hover:bg-light-surface hover:shadow-lg transition-all">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-magenta text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center mb-space-md shadow-md">
+                                    1
+                                </div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">
+                                    Encuesta institucional
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary">
+                                    Cuéntanos tus expectativas e intereses para personalizar tu experiencia de
+                                    aprendizaje.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-md border-t border-light-border flex items-center gap-space-xs text-brand-magenta font-label-sm text-label-sm font-bold">
+                                <span class="material-symbols-outlined text-headline-sm">edit_note</span>
+                                <span>Obligatoria</span>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div
+                            class="bg-surface-container-low rounded-2xl p-space-lg border border-light-border flex flex-col justify-between relative group hover:bg-light-surface hover:shadow-lg transition-all">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-obsidian-surface text-light-surface font-headline-sm text-headline-sm font-bold flex items-center justify-center mb-space-md shadow-md">
+                                    2
+                                </div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">
+                                    Prueba diagnóstica
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary">
+                                    Solo estudiantes nuevos; sin repercusión en la matrícula académica.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-md border-t border-light-border flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+                                <span class="material-symbols-outlined text-headline-sm">quiz</span>
+                                <span>Nivel inicial</span>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div
+                            class="bg-surface-container-low rounded-2xl p-space-lg border border-light-border flex flex-col justify-between relative group hover:bg-light-surface hover:shadow-lg transition-all">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-obsidian-surface text-light-surface font-headline-sm text-headline-sm font-bold flex items-center justify-center mb-space-md shadow-md">
+                                    3
+                                </div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">
+                                    Horario y aula
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary">
+                                    Consulta en el sistema académico salones y aulas asignadas para tu sede.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-md border-t border-light-border flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+                                <span class="material-symbols-outlined text-headline-sm">schedule</span>
+                                <span>En nuevosí</span>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div
+                            class="bg-surface-container-low rounded-2xl p-space-lg border border-light-border flex flex-col justify-between relative group hover:bg-light-surface hover:shadow-lg transition-all">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-obsidian-surface text-light-surface font-headline-sm text-headline-sm font-bold flex items-center justify-center mb-space-md shadow-md">
+                                    4
+                                </div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">
+                                    Correo institucional
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary">
+                                    Tu canal oficial de comunicación con acceso completo a Microsoft 365.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-md border-t border-light-border flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+                                <span class="material-symbols-outlined text-headline-sm">mail</span>
+                                <span>@cesde.edu.co</span>
+                            </div>
+                        </div>
+                        <!-- Step 5 -->
+                        <div
+                            class="bg-surface-container-low rounded-2xl p-space-lg border border-light-border flex flex-col justify-between relative group hover:bg-light-surface hover:shadow-lg transition-all">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-magenta text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center mb-space-md shadow-md">
+                                    5
+                                </div>
+                                <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-xs">
+                                    Activa Platzi y Slang
+                                </h3>
+                                <p class="font-body-md text-body-md text-secondary">
+                                    Conéctate a las plataformas digitales habilitadas con tu correo activo.
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-md border-t border-light-border flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm font-bold">
+                                <span class="material-symbols-outlined text-headline-sm">bolt</span>
+                                <span>Activación lista</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ACADEMIC CALENDAR & DUAL TRACK SYSTEM -->
+            <section class="w-full py-space-3xl px-space-lg lg:px-space-2xl bg-background">
+                <div class="max-w-margin-desktop-max mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+                        <!-- Left: Calendar Timeline Cards -->
+                        <div class="lg:col-span-6 space-y-space-lg">
+                            <div class="space-y-space-xs">
+                                <span
+                                    class="inline-block px-space-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+                                    Periodo Académico
+                                </span>
+                                <h2
+                                    class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold">
+                                    Calendario académico 2026-2
+                                </h2>
+                                <p class="font-body-lg text-body-lg text-secondary">
+                                    Planifica tu año formativo con las fechas oficiales de apertura, ceremonias y
+                                    semanas de bienestar institucional.
+                                </p>
+                            </div>
+                            <div class="space-y-space-md">
+                                <!-- Fast-track Track -->
+                                <div
+                                    class="bg-light-surface p-space-lg rounded-2xl border border-light-border shadow-sm flex items-start gap-space-md hover:border-brand-magenta/40 transition-colors">
+                                    <div
+                                        class="w-14 h-14 rounded-2xl bg-brand-magenta text-on-primary flex flex-col items-center justify-center shrink-0">
+                                        <span
+                                            class="font-headline-sm text-headline-sm font-extrabold leading-none">22</span>
+                                        <span class="font-label-sm text-label-sm uppercase font-semibold">JUN</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-space-xs">
+                                            <span
+                                                class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Intensivo</span>
+                                            <span class="font-label-sm text-label-sm text-secondary">Modalidad 1
+                                                año</span>
+                                        </div>
+                                        <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+                                            Inicio de clases Fast-track</h3>
+                                        <p class="font-body-md text-body-md text-secondary">Acelera tu titulación
+                                            técnica con plan de estudio concentrado y prácticas directas.</p>
+                                    </div>
+                                </div>
+                                <!-- Regular Track -->
+                                <div
+                                    class="bg-light-surface p-space-lg rounded-2xl border border-light-border shadow-sm flex items-start gap-space-md hover:border-brand-magenta/40 transition-colors">
+                                    <div
+                                        class="w-14 h-14 rounded-2xl bg-obsidian-surface text-light-surface flex flex-col items-center justify-center shrink-0">
+                                        <span
+                                            class="font-headline-sm text-headline-sm font-extrabold leading-none">21</span>
+                                        <span class="font-label-sm text-label-sm uppercase font-semibold">JUL</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-space-xs">
+                                            <span
+                                                class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">Semestral</span>
+                                            <span class="font-label-sm text-label-sm text-secondary">3 semestres</span>
+                                        </div>
+                                        <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+                                            Inicio de clases Regular</h3>
+                                        <p class="font-body-md text-body-md text-secondary">Formación integral
+                                            balanceada en jornadas diurna, nocturna o fin de semana.</p>
+                                    </div>
+                                </div>
+                                <!-- Upcoming Milestone Row -->
+                                <div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+                                    <div
+                                        class="p-space-sm rounded-xl bg-surface-container-low border border-light-border text-center">
+                                        <span
+                                            class="block font-label-sm text-label-sm text-brand-magenta font-bold">VIBRA</span>
+                                        <span class="font-label-sm text-label-sm text-secondary">Fecha por
+                                            confirmar</span>
+                                    </div>
+                                    <div
+                                        class="p-space-sm rounded-xl bg-surface-container-low border border-light-border text-center">
+                                        <span
+                                            class="block font-label-sm text-label-sm text-on-surface font-bold">Semanas
+                                            Culturales</span>
+                                        <span class="font-label-sm text-label-sm text-secondary">Fecha por
+                                            confirmar</span>
+                                    </div>
+                                    <div
+                                        class="p-space-sm rounded-xl bg-surface-container-low border border-light-border text-center">
+                                        <span class="block font-label-sm text-label-sm text-on-surface font-bold">Semana
+                                            Bienestar</span>
+                                        <span class="font-label-sm text-label-sm text-secondary">Fecha por
+                                            confirmar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right: Video / Cultural Campus Feature Banner -->
+                        <div class="lg:col-span-6 relative">
+                            <div
+                                class="relative rounded-3xl overflow-hidden shadow-2xl bg-obsidian-surface border border-obsidian-border group">
+                                <img alt="Campus Cesde y Comunidad Estudiantil en Medellín"
+                                    class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida/AEtjO1Vk_4SKOBkunDfTQIYFuFTmgfT_xIXn0XAs1yadn2QGJNMm3pcl58mFEbGoBCMolhBOvWsD6wMAdt97JRhEmNPDP0pqeGjKMASTA4H7YMeZ3kQI7vZPDTwbaSaHGXv1uRujJwD1en1dnKdiEzRtbs8F6WyePyo90MXG3d7etx8JYlIDT5tPDyzovqhV3bHc-aRg-reWGsC0pS2trDUFkJLxwCXCXobwhaxknhySBiYZ5QQcVP4g1w_KON1t" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-obsidian-base/90 via-obsidian-base/30 to-transparent">
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-space-xl space-y-space-sm">
+                                    <div class="flex items-center gap-space-sm">
+                                        <span class="w-3 h-3 rounded-full bg-brand-magenta"></span>
+                                        <span
+                                            class="font-label-sm text-label-sm text-light-surface uppercase tracking-wider font-semibold">Espacios
+                                            Vivos Cesde</span>
+                                    </div>
+                                    <p class="font-headline-md text-headline-md text-light-surface font-bold">
+                                        Plazuela San Ignacio, sedes regionales y laboratorios de vanguardia
+                                    </p>
+                                    <p class="font-body-md text-body-md text-surface-dim">
+                                        Aprende haciendo en talleres equipados con estándares de la industria moderna.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- IMPACT & ALIANZAS EMPRESARIALES (Comfama Ecosystem) -->
+            <section class="w-full py-space-3xl px-space-lg lg:px-space-2xl bg-obsidian-base text-light-surface">
+                <div class="max-w-margin-desktop-max mx-auto space-y-space-2xl">
+                    <div class="max-w-3xl space-y-space-xs">
+                        <span
+                            class="font-label-md text-label-md uppercase tracking-wider text-brand-magenta font-bold">Respaldo
+                            Institucional</span>
+                        <h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-light-surface font-bold">
+                            ¿Por qué elegir Cesde?
+                        </h2>
+                        <p class="font-body-xl text-body-xl text-surface-dim">
+                            Creamos puentes con las empresas a través de un aprendizaje inspirador y aplicado.
+                        </p>
+                    </div>
+                    <!-- Feature Matrix -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-xl">
+                        <div
+                            class="space-y-space-sm p-space-lg rounded-2xl bg-obsidian-card border border-obsidian-border">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-magenta/20 flex items-center justify-center text-brand-magenta">
+                                <span class="material-symbols-outlined text-headline-md">handshake</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-light-surface font-bold">Acompañamos
+                                talentos transformadores</h3>
+                            <p class="font-body-md text-body-md text-surface-dim">
+                                Formamos egresados que agregan valor tangible en las empresas desde el primer día
+                                laboral.
+                            </p>
+                        </div>
+                        <div
+                            class="space-y-space-sm p-space-lg rounded-2xl bg-obsidian-card border border-obsidian-border">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-magenta/20 flex items-center justify-center text-brand-magenta">
+                                <span class="material-symbols-outlined text-headline-md">speed</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-light-surface font-bold">Experiencias
+                                ágiles y pertinentes</h3>
+                            <p class="font-body-md text-body-md text-surface-dim">
+                                Currículos flexibles que evolucionan a la par de los cambios tecnológicos y
+                                requerimientos del mercado laboral.
+                            </p>
+                        </div>
+                        <div
+                            class="space-y-space-sm p-space-lg rounded-2xl bg-obsidian-card border border-obsidian-border">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-magenta/20 flex items-center justify-center text-brand-magenta">
+                                <span class="material-symbols-outlined text-headline-md">supervisor_account</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-light-surface font-bold">Mentores de
+                                habilidades técnicas y humanas</h3>
+                            <p class="font-body-md text-body-md text-surface-dim">
+                                Docentes activos en la industria que guían tu vocación con cercanía y rigor profesional.
+                            </p>
+                        </div>
+                        <div
+                            class="space-y-space-sm p-space-lg rounded-2xl bg-obsidian-card border border-obsidian-border">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-magenta/20 flex items-center justify-center text-brand-magenta">
+                                <span class="material-symbols-outlined text-headline-md">groups</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-light-surface font-bold">Equipo con
+                                empresas que valoran tu talento</h3>
+                            <p class="font-body-md text-body-md text-surface-dim">
+                                Alianzas con líderes corporativos en Antioquia, Urabá, Bogotá y el Caribe colombiano.
+                            </p>
+                        </div>
+                        <div
+                            class="space-y-space-sm p-space-lg rounded-2xl bg-obsidian-card border border-obsidian-border">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-magenta/20 flex items-center justify-center text-brand-magenta">
+                                <span class="material-symbols-outlined text-headline-md">public</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-light-surface font-bold">Inglés como
+                                puente global de desarrollo</h3>
+                            <p class="font-body-md text-body-md text-surface-dim">
+                                Aprende con Slang la terminología técnica de tu área para competir en escenarios
+                                internacionales.
+                            </p>
+                        </div>
+                        <div
+                            class="space-y-space-sm p-space-lg rounded-2xl bg-obsidian-card border border-obsidian-border">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-magenta/20 flex items-center justify-center text-brand-magenta">
+                                <span class="material-symbols-outlined text-headline-md">smart_toy</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-light-surface font-bold">IA como aliada de
+                                lo humano</h3>
+                            <p class="font-body-md text-body-md text-surface-dim">
+                                Aprovechamos la tecnología para enriquecer la creatividad, la resolución de problemas y
+                                la empatía.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- NOTICIAS & AL DÍA CON CESDE -->
+            <section class="w-full py-space-3xl px-space-lg lg:px-space-2xl bg-background">
+                <div class="max-w-margin-desktop-max mx-auto space-y-space-2xl">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+                        <div>
+                            <span
+                                class="font-label-md text-label-md uppercase tracking-wider text-brand-magenta font-bold">Actualidad
+                                Institucional</span>
+                            <h2
+                                class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold mt-1">
+                                Al día con Cesde
+                            </h2>
+                            <p class="font-body-lg text-body-lg text-secondary max-w-xl mt-space-xs">
+                                Hitos comunitarios, convenios con impacto y noticias del ecosistema formativo.
+                            </p>
+                        </div>
+                        <a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-brand-magenta hover:text-brand-magenta-dark font-bold transition-colors"
+                            data-path="noticias" href="#">
+                            <span>Ver todas las noticias</span>
+                            <span class="material-symbols-outlined text-headline-sm">east</span>
+                        </a>
+                    </div>
+                    <!-- News Cards Mosaic -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+                        <!-- News Card 1: Microcredenciales (Using real image 6) -->
+                        <article
+                            class="bg-light-surface rounded-2xl overflow-hidden border border-light-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col group">
+                            <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+                                <img alt="Estudiantes en aula colaborativa Cesde"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida/AEtjO1XII14XRoJlnTPKD9SEL72ZL9hyvnc3VdMy9thSlpIDcx-K7x_vkzXnIGlsxhtat0ZN9SfLcLO0srLe1tY0kqmdybAZYFV8HxLgM2byydAoOpgB6LhRm-NGJJBFZ8cDVfesBf1pCK36uh6odKjIH4d1HOVPIRCC8MTs66_Lv8xoekGqf0h3mEaiTrWJzVgiBk2dYh4MKAxvBr2ZvbmHhO14uDIXbIK829a1J797uqegSdhYh4pZG52uh4Zr" />
+                                <div
+                                    class="absolute top-3 left-3 bg-obsidian-surface/85 backdrop-blur-md text-light-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full">
+                                    21 Sep 2026
+                                </div>
+                            </div>
+                            <div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+                                <div>
+                                    <span
+                                        class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider block mb-1">Innovación
+                                        Educativa</span>
+                                    <h3
+                                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors">
+                                        Microcredenciales: una nueva forma de reconocer lo que sabes hacer
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-secondary mt-space-xs">
+                                        Certificaciones ágiles para validar competencias técnicas específicas requeridas
+                                        por las empresas del país.
+                                    </p>
+                                </div>
+                                <a class="inline-flex items-center gap-space-xs text-label-lg text-label-lg text-brand-magenta font-bold group-hover:underline"
+                                    href="#">
+                                    <span>Leer artículo completo</span>
+                                    <span class="material-symbols-outlined text-headline-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- News Card 2: Fundación Juanfe (Using real image 5) -->
+                        <article
+                            class="bg-light-surface rounded-2xl overflow-hidden border border-light-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col group">
+                            <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+                                <img alt="Graduación de primera cohorte con Fundación Juanfe en Urabá"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida/AEtjO1X4L6nAa2YPvdmA36_DjtlcEmPm2R2ak22M3_Kv56EX2fhfXzzny1F33l5YbuUhyY57MRca9yAhrWXMwJCuMXeVkufzZ-7oamqlaI8nxGQwxpxQJyIfWK75ezsSq29bLC_MR24N7JOrVDt-aYQcdLtvx4Po3n8nl4v6VLU-PoUNWp1_Mw_R3edWrUHCxR7dEPXQ_jg4eZGyMetLdcRHiDErzRSPgDm7z00W_3E_yZ7EGHD5-y2rgss-pcZU" />
+                                <div
+                                    class="absolute top-3 left-3 bg-obsidian-surface/85 backdrop-blur-md text-light-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full">
+                                    25 Ago 2026
+                                </div>
+                            </div>
+                            <div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+                                <div>
+                                    <span
+                                        class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-wider block mb-1">Transformación
+                                        Social</span>
+                                    <h3
+                                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors">
+                                        Celebramos la certificación de la primera cohorte de la Fundación Juanfe en
+                                        Urabá
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-secondary mt-space-xs">
+                                        Empoderamiento y empleabilidad femenina en la subregión de Urabá mediante ciclos
+                                        de formación técnica.
+                                    </p>
+                                </div>
+                                <a class="inline-flex items-center gap-space-xs text-label-lg text-label-lg text-brand-magenta font-bold group-hover:underline"
+                                    href="#">
+                                    <span>Leer artículo completo</span>
+                                    <span class="material-symbols-outlined text-headline-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- News Card 3: 54 Años (Using anniversary graphic image 4) -->
+                        <article
+                            class="bg-light-surface rounded-2xl overflow-hidden border border-light-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col group">
+                            <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+                                <img alt="Cesde 54 Años Conectando Educación y Empleo"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida/AEtjO1UY8UmjdonGN_nUaJA8lom6nbt3E9wTxvq2U7G5wR-DVo1DHTtChjZ1vRqtzcgZlg2UZfoA50aGuSUi0SiVZbrrlhLnOHRddOrKU8nArgoYM9NlzugPBfMyJUJTX40VACsGi-NtEHRBqIPuo2z4OT9roIZ2DBlAHpvb1sR4Z4bjOdzZ9Cmd9Aq4c3G1-H2mD0bxrVXa8J-AgjrfddKptk4Hea2L3sPjsQ_50p0UwDGYJoq_6RnUOzroK2I3" />
+                                <div
+                                    class="absolute top-3 left-3 bg-obsidian-surface/85 backdrop-blur-md text-light-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full">
+                                    15 Jul 2026
+                                </div>
+                            </div>
+                            <div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+                                <div>
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-secondary-fixed-variant font-bold uppercase tracking-wider block mb-1">Hito
+                                        Institucional</span>
+                                    <h3
+                                        class="font-headline-sm text-headline-sm text-on-surface font-bold group-hover:text-brand-magenta transition-colors">
+                                        Cesde celebra 54 años conectando educación y empleo para transformar vidas
+                                    </h3>
+                                    <p class="font-body-md text-body-md text-secondary mt-space-xs">
+                                        Más de medio siglo consolidando la formación técnica laboral más representativa
+                                        del departamento de Antioquia.
+                                    </p>
+                                </div>
+                                <a class="inline-flex items-center gap-space-xs text-label-lg text-label-lg text-brand-magenta font-bold group-hover:underline"
+                                    href="#">
+                                    <span>Leer artículo completo</span>
+                                    <span class="material-symbols-outlined text-headline-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- COMFAMA CONEXIÓN & CTA FINAL BANNER -->
+            <section
+                class="w-full py-space-3xl px-space-lg lg:px-space-2xl bg-surface-container-high relative overflow-hidden">
+                <div
+                    class="max-w-margin-desktop-max mx-auto bg-gradient-to-r from-obsidian-base to-obsidian-surface text-light-surface rounded-3xl p-space-xl lg:p-space-3xl relative overflow-hidden shadow-2xl">
+                    <div
+                        class="absolute -right-20 -bottom-20 w-96 h-96 bg-brand-magenta/25 blur-3xl rounded-full pointer-events-none">
+                    </div>
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+                        <div class="lg:col-span-8 space-y-space-md">
+                            <div
+                                class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-brand-magenta/20 text-primary-fixed border border-brand-magenta/30 font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                                Subsidios Comfama Disponibles
+                            </div>
+                            <h2
+                                class="font-headline-xl text-headline-lg lg:text-headline-xl text-light-surface font-bold">
+                                ¿Afiliado a Comfama? Tu matrícula tiene tarifas diferenciales
+                            </h2>
+                            <p class="font-body-lg text-body-lg text-surface-dim max-w-2xl">
+                                Aprovecha los beneficios económicos para categorías A, B y C. Construye tu proyecto
+                                vocacional hoy mismo con la calidad educativa de Cesde.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+                                <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-brand-magenta text-on-primary font-label-lg text-label-lg shadow-lg hover:bg-brand-magenta-dark transition-all"
+                                    data-path="inscripcion" href="#">
+                                    <span>Iniciar proceso de matrícula</span>
+                                    <span class="material-symbols-outlined text-headline-sm">check_circle</span>
+                                </a>
+                                <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-obsidian-card hover:bg-obsidian-surface text-light-surface border border-obsidian-border font-label-lg text-label-lg transition-all"
+                                    href="https://api.whatsapp.com/send?phone=573207372275" rel="noopener"
+                                    target="_blank">
+                                    <span
+                                        class="material-symbols-outlined text-headline-sm text-accent-mint">chat</span>
+                                    <span>Asesoría por WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="lg:col-span-4 bg-obsidian-surface/80 border border-obsidian-border rounded-2xl p-space-lg text-surface-dim space-y-space-sm">
+                            <div class="flex items-center gap-space-sm">
+                                <span class="material-symbols-outlined text-brand-magenta text-headline-md">call</span>
+                                <div>
+                                    <span class="font-label-sm text-label-sm block text-light-surface">Línea de Atención
+                                        General</span>
+                                    <span class="font-headline-sm text-headline-sm font-bold text-light-surface">(604)
+                                        229 11 00</span>
+                                </div>
+                            </div>
+                            <div
+                                class="pt-space-xs border-t border-obsidian-border text-label-sm text-secondary-fixed-dim">
+                                Horario: Lunes a viernes 7:00 a.m. a 6:00 p.m. · Sábados 8:00 a.m. a 12:00 m.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="w-full bg-obsidian-base text-light-surface py-space-3xl px-space-lg">
+        <div class="max-w-margin-desktop-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-2xl">
+                <div class="space-y-space-md">
+                    <div class="flex items-center tracking-tight"><span
+                            class="font-display-hero text-headline-sm font-extrabold text-brand-magenta">CESDE</span><span
+                            class="mx-space-xs text-obsidian-border font-headline-sm">|</span><span
+                            class="font-headline-sm text-headline-sm font-bold text-light-surface lowercase">comfama</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-surface-dim">Educación con propósito social transformador.
+                        Técnica con sentido humano articulada al empleo de futuro.</p>
+                    <p class="font-label-sm text-label-sm text-secondary-fixed-dim">Institución de Formación para el
+                        Trabajo y el Desarrollo Humano. Vigilada Mineducación y SuperSubsidio.</p>
+                    <div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Canal Digital 1"
+                            class="w-8 h-8 rounded-full bg-obsidian-card flex items-center justify-center text-surface-dim hover:text-brand-magenta hover:bg-obsidian-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-headline-sm">share</span></a><a
+                            aria-label="Canal Digital 2"
+                            class="w-8 h-8 rounded-full bg-obsidian-card flex items-center justify-center text-surface-dim hover:text-brand-magenta hover:bg-obsidian-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-headline-sm">public</span></a><a
+                            aria-label="Canal Digital 3"
+                            class="w-8 h-8 rounded-full bg-obsidian-card flex items-center justify-center text-surface-dim hover:text-brand-magenta hover:bg-obsidian-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-headline-sm">forum</span></a><a
+                            aria-label="Canal Digital 4"
+                            class="w-8 h-8 rounded-full bg-obsidian-card flex items-center justify-center text-surface-dim hover:text-brand-magenta hover:bg-obsidian-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-headline-sm">smart_display</span></a><a
+                            aria-label="Canal Digital 5"
+                            class="w-8 h-8 rounded-full bg-obsidian-card flex items-center justify-center text-surface-dim hover:text-brand-magenta hover:bg-obsidian-surface transition-colors"
+                            href="#"><span class="material-symbols-outlined text-headline-sm">podcasts</span></a></div>
+                </div>
+                <div class="space-y-space-md">
+                    <h3 class="font-headline-sm text-headline-sm text-light-surface">Atención al Ciudadano</h3>
+                    <ul class="space-y-space-xs font-body-md text-body-md text-surface-dim">
+                        <li><span class="block font-label-md text-light-surface">Línea General:</span> (604) 229 11 00
+                        </li>
+                        <li><span class="block font-label-md text-light-surface">WhatsApp Institucional:</span> +57
+                            (310) 895 24 33</li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="pqrsf" href="#">PQRSF y
+                                Felicitaciones</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="correo-institucional"
+                                href="#">contactenos@cesde.edu.co</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="transparencia"
+                                href="#">Notificaciones judiciales</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md">
+                    <h3 class="font-headline-sm text-headline-sm text-light-surface">Sedes</h3>
+                    <ul class="space-y-space-xs font-body-md text-body-md text-surface-dim">
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="sede-medellin"
+                                href="#">Medellín (Centro - Plazuela San Ignacio)</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="sede-bello" href="#">Bello
+                                (Parque Central)</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="sede-rionegro"
+                                href="#">Rionegro (Oriente Antioqueño)</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="sede-apartado"
+                                href="#">Apartadó (Urabá)</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="sede-bogota"
+                                href="#">Bogotá D.C.</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="sede-cartagena"
+                                href="#">Cartagena (Caribe)</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md">
+                    <h3 class="font-headline-sm text-headline-sm text-light-surface">Institucional</h3>
+                    <ul class="space-y-space-xs font-body-md text-body-md text-surface-dim">
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="calidad-academica"
+                                href="#">Sistema de Calidad</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="sostenibilidad"
+                                href="#">Sostenibilidad &amp; Comunidad</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors"
+                                data-path="transparencia-institucional" href="#">Transparencia y Buen Gobierno</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="politicas-privacidad"
+                                href="#">Políticas de Privacidad de Datos</a></li>
+                        <li><a class="hover:text-brand-magenta transition-colors" data-path="reglamento-estudiantil"
+                                href="#">Reglamento Estudiantil</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-space-md">
+                    <h3 class="font-headline-sm text-headline-sm text-light-surface">Plataformas</h3>
+                    <div class="space-y-space-sm"><a
+                            class="block p-space-sm rounded-lg bg-obsidian-card hover:bg-obsidian-surface transition-all"
+                            data-path="ecesde-campus" href="#"><span
+                                class="font-label-lg text-label-lg text-accent-mint block">eCesde Campus</span><span
+                                class="font-label-sm text-label-sm text-surface-dim">Aulas y campus virtual</span></a><a
+                            class="block p-space-sm rounded-lg bg-obsidian-card hover:bg-obsidian-surface transition-all"
+                            data-path="platzi-cesde" href="#"><span
+                                class="font-label-lg text-label-lg text-accent-sky block">Convenio Platzi</span><span
+                                class="font-label-sm text-label-sm text-surface-dim">Rutas de tecnología</span></a><a
+                            class="block p-space-sm rounded-lg bg-obsidian-card hover:bg-obsidian-surface transition-all"
+                            data-path="slang-ingles" href="#"><span
+                                class="font-label-lg text-label-lg text-accent-lilac block">Slang English</span><span
+                                class="font-label-sm text-label-sm text-surface-dim">Inglés técnico
+                                vocacional</span></a></div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col sm:flex-row items-center justify-between pt-space-xl text-secondary-fixed-dim font-label-sm text-label-sm gap-space-md">
+                <div>© 2025 CESDE Institución de Educación. Una empresa de la familia Comfama. Todos los derechos
+                    reservados.</div>
+                <div class="flex items-center gap-space-lg"><a class="hover:text-light-surface transition-colors"
+                        data-path="terminos-condiciones" href="#">Términos y Condiciones</a><a
+                        class="hover:text-light-surface transition-colors" data-path="mapa-del-sitio" href="#">Mapa del
+                        Sitio</a><a class="hover:text-light-surface transition-colors" data-path="seguridad-portal"
+                        href="#">Seguridad de la Información</a></div>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed bottom-6 right-6 z-50"><button
+            class="flex items-center gap-space-sm rounded-full bg-brand-magenta text-on-primary px-space-lg py-space-sm font-label-lg text-label-lg shadow-[0_8px_30px_rgba(227,6,102,0.4)] hover:bg-brand-magenta-dark transition-all transform hover:scale-105 active:scale-95"
+            type="button"><span class="material-symbols-outlined text-headline-sm">support_agent</span><span>Canales de
+                atención</span></button></div>
+</body>
+
+</html>
