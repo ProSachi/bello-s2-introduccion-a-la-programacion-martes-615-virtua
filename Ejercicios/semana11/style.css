@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+}
+
+.padre {
+  background-color: aqua;
+  position: relative;
+  top: 20px; /* Se mueve 20px hacia abajo */
+  left: 30px; /* Se mueve 30px a la derecha */
+}
+
+.padre2 {
+  margin-top: 0;
+  background-color: darkgoldenrod;
+}
+
+.elemento {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  background-color: rgba(243, 78, 78, 0.6);
+  width: 30px;
+  height: 50px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  align-content: center;
+}
+
+.elemento > p {
+  font-family: "Courier New", Courier, monospace;
+  color: beige;
+}
+
+.fijado {
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+}
+
+.fijado img {
+  width: 70px;
+  height: 70px;
+}
+
+.navegacion {
+  margin: 10px;
+}
+
+.navegacion ul a {
+  text-decoration: none;
+}
+.navegacion ul {
+  list-style: none;
+}
+
+.navegacion-principal {
+  background-color: #333;
+  padding: 15px;
+  /* Magia Sticky */
+  position: sticky;
+  top: 0; /* Se pegará cuando alcance exactamente el tope (0) de la pantalla */
+  z-index: 1;
+}
+.navegacion-principal ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Quita viñetas */
+}
+.navegacion-principal li {
+  display: inline-block; /* Las pone lado a lado pero respetando márgenes/padding */
+  margin-right: 20px;
+}
+.navegacion-principal a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mensaje-flotante {
+  visibility: hidden;
+  width: 180px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: -30%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.fijado:hover .mensaje-flotante {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container {
+  background: rgb(242, 255, 0);
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.uno {
+  background: blue;
+  width: 100px;
+  height: 100px;
+}
+
+.dos {
+  background: rgb(78, 226, 19);
+  width: 100px;
+  height: 100px;
+}
+
+.tres {
+  background: rgb(255, 0, 247);
+  width: 100px;
+  height: 100px;
+}
+
+.cuatro {
+  background: rgb(255, 0, 247);
+  width: 10px;
+  height: 10px;
+}
+.cinco {
+  background: rgb(0, 255, 42);
+  width: 10px;
+  height: 10px;
+}
+.seis {
+  background: rgb(255, 0, 81);
+  width: 10px;
+  height: 10px;
+}
+
+.navegacion-secundario {
+  display: flex;
+  justify-content: start;
+}
+
+.navegacion-secundario ul a {
+  text-decoration: none;
+}
+
+.navegacion-secundario ul li {
+  list-style: none;
+}
+
+.ul-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.espaciado{
+    width: 200px;
+}

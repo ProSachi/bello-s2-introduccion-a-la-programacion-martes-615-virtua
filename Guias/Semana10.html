@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Posicionamiento CSS</title>
+    <style>
+        :root {
+            --color-padre: #34495e;
+            --color-hijo: #e74c3c;
+            --color-fondo: #ecf0f1;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-fondo);
+            display: flex;
+        }
+
+        /* Panel de Control Lateral (Fijo para que el docente lo opere mientras hace scroll) */
+        #panel-control {
+            width: 320px;
+            background: white;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        /* Área de visualización con scroll forzado */
+        #area-visualizacion {
+            margin-left: 320px;
+            padding: 40px;
+            width: calc(100% - 320px);
+            height: 200vh; /* Fuerza el scroll vertical para probar fixed y sticky */
+            background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Elementos del Simulador */
+        .caja-padre {
+            background-color: var(--color-padre);
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            border: 4px dashed #2c3e50;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .caja-padre::before {
+            content: "Contenedor Padre";
+            color: white;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .caja-hija {
+            background-color: var(--color-hijo);
+            color: white;
+            width: 120px;
+            height: 120px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Estilos de los controles */
+        h2, h3 { margin-top: 0; color: #2c3e50; font-size: 1.1rem; }
+        .grupo-control { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ddd; }
+        label { display: block; margin-bottom: 5px; font-size: 0.9rem; font-weight: bold; color: #555; }
+        select, input[type="text"] { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .ayuda-visual { font-size: 0.8rem; color: #7f8c8d; background: #f9f9f9; padding: 10px; border-left: 3px solid #3498db; }
+        .btn-rapido { background: #3498db; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; width: 100%; margin-bottom: 5px; font-size: 0.9rem; }
+        .btn-rapido:hover { background: #2980b9; }
+
+        /* Elemento extra para probar contexto */
+        .texto-relleno { color: #7f8c8d; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <aside id="panel-control">
+        <h2>Controles del DOM</h2>
+        
+        <div class="grupo-control">
+            <h3>1. El Contenedor Padre</h3>
+            <label for="pos-padre">Propiedad position:</label>
+            <select id="pos-padre" onchange="actualizarEstilos()">
+                <option value="static">static (Por defecto)</option>
+                <option value="relative">relative (Ancla de coordenadas)</option>
+            </select>
+        </div>
+
+        <div class="grupo-control">
+            <h3>2. La Caja Hija</h3>
+            <label for="pos-hijo">Propiedad position:</label>
+            <select id="pos-hijo" onchange="actualizarEstilos()">
+                <option value="static">static (Flujo normal)</option>
+                <option value="relative">relative (Desplazado de sí mismo)</option>
+                <option value="absolute">absolute (Anclado al ancestro posicionado)</option>
+                <option value="fixed">fixed (Anclado a la pantalla)</option>
+                <option value="sticky">sticky (Pegajoso al hacer scroll)</option>
+            </select>
+
+            <label>Coordenadas (usa px, %, o deja vacío):</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div>
+                    <label style="font-weight: normal;">Top</label>
+                    <input type="text" id="coord-top" placeholder="ej. 0px" onkeyup="actualizarEstilos()">
+                </div>
+                <div>
+                    <label style="font-weight: normal;">Left</label>
+                    <input type="text" id="coord-left" placeholder="ej. 50%" onkeyup="actualizarEstilos()">
+                </div>
+            </div>
+        </div>
+
+        <div class="grupo-control">
+            <h3>Escenarios Rápidos (Clase)</h3>
+            <button class="btn-rapido" onclick="escenarioFantasma()">Mostrar Comportamiento Relative</button>
+            <button class="btn-rapido" onclick="escenarioHuerfano()">Absolute sin Padre Posicionado</button>
+            <button class="btn-rapido" onclick="escenarioAnclado()">Absolute con Padre Relative</button>
+            <button class="btn-rapido" onclick="escenarioSticky()">Mostrar Comportamiento Sticky</button>
+        </div>
+
+        <div class="ayuda-visual" id="panel-estado">
+            El elemento se encuentra en el flujo normal del documento. Ignora las coordenadas (top, left).
+        </div>
+    </aside>
+
+    <main id="area-visualizacion">
+        <h1 style="color: #2c3e50;">Área de Renderizado (Haga scroll hacia abajo)</h1>
+        <p>Este texto está antes del contenedor padre.</p>
+        
+        <div class="caja-padre" id="elemento-padre">
+            <div class="caja-hija" id="elemento-hijo">
+                Caja Hija
+            </div>
+            <p class="texto-relleno">Elemento hermano dentro del padre. Observa si la caja hija lo empuja o se superpone.</p>
+        </div>
+        
+        <div style="margin-top: 50px;">
+            <p>Sigue bajando para probar las posiciones fijas y pegajosas...</p>
+            <div style="height: 100vh;"></div>
+            <p>Fin de la página.</p>
+        </div>
+    </main>
+
+    <script>
+        const padre = document.getElementById('elemento-padre');
+        const hijo = document.getElementById('elemento-hijo');
+        const panelEstado = document.getElementById('panel-estado');
+
+        function actualizarEstilos() {
+            // Obtener valores del panel
+            const posPadre = document.getElementById('pos-padre').value;
+            const posHijo = document.getElementById('pos-hijo').value;
+            const topVal = document.getElementById('coord-top').value;
+            const leftVal = document.getElementById('coord-left').value;
+
+            // Aplicar al DOM
+            padre.style.position = posPadre;
+            
+            hijo.style.position = posHijo;
+            hijo.style.top = topVal;
+            hijo.style.left = leftVal;
+
+            // Actualizar cuadro de explicación técnica (Pedagogía)
+            let explicacion = "";
+            
+            if (posHijo === 'static') {
+                explicacion = "<strong>STATIC:</strong> La caja sigue el flujo normal del documento. Las propiedades Top y Left son completamente ignoradas.";
+            } else if (posHijo === 'relative') {
+                explicacion = "<strong>RELATIVE:</strong> La caja se mueve en base a su posición original. Su espacio original se conserva vacío (no rompe el documento).";
+            } else if (posHijo === 'absolute') {
+                if (posPadre === 'static') {
+                    explicacion = "<strong>ABSOLUTE (Crítico):</strong> La caja sale del flujo (los elementos debajo suben). Al ser el padre 'static', el hijo busca un ancla superior y se posiciona respecto al <em>viewport</em> (ventana).";
+                } else {
+                    explicacion = "<strong>ABSOLUTE:</strong> La caja sale del flujo normal. Como el padre es 'relative', las coordenadas 0,0 del hijo inician exactamente en los bordes del Contenedor Padre.";
+                }
+            } else if (posHijo === 'fixed') {
+                explicacion = "<strong>FIXED:</strong> Sale del flujo normal y se ancla físicamente a la pantalla del navegador. Ignora al contenedor padre. Haga scroll para comprobarlo.";
+            } else if (posHijo === 'sticky') {
+                explicacion = "<strong>STICKY:</strong> Flujo normal hasta que hace scroll y alcanza la coordenada definida (ej. top: 0px), entonces actúa como 'fixed'. El anclaje desaparece cuando el padre sale de la pantalla.";
+            }
+
+            panelEstado.innerHTML = explicacion;
+        }
+
+        // Funciones para inyectar escenarios didácticos rápidamente sin gastar tiempo de clase escribiendo
+        function escenarioFantasma() {
+            document.getElementById('pos-padre').value = 'static';
+            document.getElementById('pos-hijo').value = 'relative';
+            document.getElementById('coord-top').value = '50px';
+            document.getElementById('coord-left').value = '50px';
+            actualizarEstilos();
+        }
+
+        function escenarioHuerfano() {
+            document.getElementById('pos-padre').value = 'static';
+            document.getElementById('pos-hijo').value = 'absolute';
+            document.getElementById('coord-top').value = '0px';
+            document.getElementById('coord-left').value = '0px';
+            actualizarEstilos();
+        }
+
+        function escenarioAnclado() {
+            document.getElementById('pos-padre').value = 'relative';
+            document.getElementById('pos-hijo').value = 'absolute';
+            document.getElementById('coord-top').value = '0px';
+            document.getElementById('coord-left').value = '0px';
+            actualizarEstilos();
+        }
+
+        function escenarioSticky() {
+            document.getElementById('pos-padre').value = 'static';
+            document.getElementById('pos-hijo').value = 'sticky';
+            document.getElementById('coord-top').value = '0px';
+            document.getElementById('coord-left').value = '';
+            actualizarEstilos();
+            window.scrollTo({ top: 100, behavior: 'smooth' }); // Forza un pequeño scroll
+        }
+
+        // Inicializar
+        actualizarEstilos();
+    </script>
+</body>
+</html>

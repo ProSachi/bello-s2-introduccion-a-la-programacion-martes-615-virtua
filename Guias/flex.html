@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Ejes Flexbox</title>
+    <style>
+        :root {
+            --main-color: #2c3e50;
+            --cross-color: #e74c3c;
+            --box-color: #3498db;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { color: #333; margin-bottom: 5px; }
+        p.subtitle { color: #666; margin-top: 0; margin-bottom: 20px; }
+        
+        .panel-control {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+        label { font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; color: #444; }
+        select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        /* Área de visualización y Ejes */
+        .escenario {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 20px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        /* Contenedor Flex Real */
+        #flex-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        .caja {
+            width: 60px;
+            height: 60px;
+            background-color: var(--box-color);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 4px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Representación Visual de los Ejes */
+        .eje {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.85rem;
+            pointer-events: none; /* Para que no estorbe los clics */
+            transition: all 0.5s ease;
+            opacity: 0.8;
+            z-index: 10;
+        }
+
+        #eje-principal { color: var(--main-color); }
+        #eje-cruzado { color: var(--cross-color); }
+
+        /* Estados de los ejes cuando es ROW */
+        .estado-row #eje-principal {
+            top: -30px; left: 0; width: 100%; height: 20px;
+            border-bottom: 3px solid var(--main-color);
+        }
+        .estado-row #eje-principal::after { content: "▶"; position: absolute; right: -10px; bottom: -12px; font-size: 1.2rem; }
+        .estado-row #eje-principal .etiqueta { position: absolute; top: -20px; }
+
+        .estado-row #eje-cruzado {
+            left: -30px; top: 0; width: 20px; height: 100%;
+            border-right: 3px dashed var(--cross-color);
+        }
+        .estado-row #eje-cruzado::after { content: "▼"; position: absolute; right: -11px; bottom: -15px; font-size: 1.2rem; }
+        .estado-row #eje-cruzado .etiqueta { position: absolute; left: -140px; top: 50%; transform: translateY(-50%); width: 130px; text-align: right; }
+
+        /* Estados de los ejes cuando es COLUMN */
+        .estado-column #eje-principal {
+            left: -30px; top: 0; width: 20px; height: 100%;
+            border-right: 3px solid var(--main-color);
+        }
+        .estado-column #eje-principal::after { content: "▼"; position: absolute; right: -11px; bottom: -15px; font-size: 1.2rem; }
+        .estado-column #eje-principal .etiqueta { position: absolute; left: -150px; top: 50%; transform: translateY(-50%); width: 140px; text-align: right; }
+
+        .estado-column #eje-cruzado {
+            top: -30px; left: 0; width: 100%; height: 20px;
+            border-bottom: 3px dashed var(--cross-color);
+        }
+        .estado-column #eje-cruzado::after { content: "▶"; position: absolute; right: -10px; bottom: -12px; font-size: 1.2rem; }
+        .estado-column #eje-cruzado .etiqueta { position: absolute; top: -20px; }
+
+        .leyenda {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+        .item-leyenda { display: flex; align-items: center; gap: 5px; }
+        .color-main { width: 15px; height: 3px; background: var(--main-color); }
+        .color-cross { width: 15px; height: 3px; border-bottom: 3px dashed var(--cross-color); }
+    </style>
+</head>
+<body>
+
+    <h1>La Linterna de Flexbox</h1>
+    <p class="subtitle">Observa cómo giran los ejes al cambiar la dirección</p>
+
+    <div class="panel-control">
+        <div class="control-group">
+            <label for="flex-direction">flex-direction (Gira la linterna):</label>
+            <select id="flex-direction">
+                <option value="row">row (Fila - Horizontal)</option>
+                <option value="column">column (Columna - Vertical)</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="justify-content">justify-content:</label>
+            <select id="justify-content">
+                <option value="flex-start">flex-start</option>
+                <option value="center">center</option>
+                <option value="flex-end">flex-end</option>
+                <option value="space-between">space-between</option>
+                <option value="space-around">space-around</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="align-items">align-items:</label>
+            <select id="align-items">
+                <option value="stretch">stretch</option>
+                <option value="flex-start">flex-start</option>
+                <option value="center">center</option>
+                <option value="flex-end">flex-end</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="escenario estado-row" id="escenario">
+        <div class="eje" id="eje-principal">
+            <span class="etiqueta">justify-content actúa aquí</span>
+        </div>
+        <div class="eje" id="eje-cruzado">
+            <span class="etiqueta">align-items actúa aquí</span>
+        </div>
+        
+        <div id="flex-container">
+            <div class="caja">1</div>
+            <div class="caja">2</div>
+            <div class="caja">3</div>
+        </div>
+    </div>
+
+    <div class="leyenda">
+        <div class="item-leyenda"><div class="color-main"></div> Eje Principal (Main Axis)</div>
+        <div class="item-leyenda"><div class="color-cross"></div> Eje Cruzado (Cross Axis)</div>
+    </div>
+
+    <script>
+        const flexDirectionObj = document.getElementById('flex-direction');
+        const justifyObj = document.getElementById('justify-content');
+        const alignObj = document.getElementById('align-items');
+        
+        const container = document.getElementById('flex-container');
+        const escenario = document.getElementById('escenario');
+
+        function actualizarFlexbox() {
+            // Actualizar propiedades CSS reales
+            container.style.flexDirection = flexDirectionObj.value;
+            container.style.justifyContent = justifyObj.value;
+            container.style.alignItems = alignObj.value;
+
+            // Actualizar la interfaz de los ejes (Rotación)
+            if (flexDirectionObj.value === 'row' || flexDirectionObj.value === 'row-reverse') {
+                escenario.className = 'escenario estado-row';
+            } else {
+                escenario.className = 'escenario estado-column';
+            }
+        }
+
+        // Escuchar cambios
+        flexDirectionObj.addEventListener('change', actualizarFlexbox);
+        justifyObj.addEventListener('change', actualizarFlexbox);
+        alignObj.addEventListener('change', actualizarFlexbox);
+
+        // Inicializar
+        actualizarFlexbox();
+    </script>
+</body>
+</html>
